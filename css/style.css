@@ -1,0 +1,90 @@
+body{
+	width: auto;
+	height: auto;
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+
+/*Titulo do site*/
+/*Estilização prévia como teste*/
+.title-header{
+	margin-top: -75px;
+	margin-left: -10px;
+	font-size: 30px;
+	height: 150px;
+	width: 110%;
+	background-color: #675399;
+	transform: skewY(-1.5deg);
+}
+
+.title-header h1{
+	transform: skewY(2deg);
+	padding: 55px;
+}
+/*Estilização prévia como teste*/
+
+
+
+/*Seleção do conteudo principal*/
+.main-content{
+	overflow: all;
+	width: auto;
+	height:auto;
+	position: absolute;
+	left: 2%;
+	margin-top: 10%;
+}
+
+/*Sub conteudo dos sites como titulo para categorias*/
+.sub-content{
+	margin: 32vh;
+	column-count: 4;
+}
+
+/*Menu lateral de link*/
+.data-link{
+	float: right;
+	height: auto;
+	width:auto;
+	border-style: solid;
+	border-width: 1px;
+	border-color: grey;
+	border-radius: 10px;
+	padding: 30px;
+}
+
+/*Espaçamento entre cada link para menu lateral*/
+.data-link li{
+	padding:20px;
+	margin: 0 auto; 
+}
+
+
+
+/*Personalização do scrollbar*/
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey; 
+	border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #f0da53; 
+	border-radius: #696969;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #363636; 
+
+}
+
+
+/*Codigo para comportamento mobile*/
