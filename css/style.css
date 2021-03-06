@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 body{
 	width: auto;
 	height: auto;
 	overflow-y: scroll;
 	scroll-behavior: smooth;
 	overflow-x: hidden;
+	background: #454549;
+	font-family: 'DotGothic16', sans-serif;
 }
 
 /*Titulo do site*/
@@ -12,15 +15,20 @@ body{
 	margin-top: -75px;
 	margin-left: -10px;
 	font-size: 30px;
-	height: 150px;
+	height: 180px;
 	width: 110%;
-	background-color: #675399;
+	background-color: #161618;
 	transform: skewY(-1.5deg);
+	color: #dddddd;
 }
 
 .title-header h1{
 	transform: skewY(2deg);
-	padding: 55px;
+	padding: 28px;
+}
+.title-header h1:after{
+	margin-left: 20px;
+	content:url(../imgs/Icon.png);
 }
 /*Estilização prévia como teste*/
 
@@ -56,8 +64,16 @@ body{
 
 /*Espaçamento entre cada link para menu lateral*/
 .data-link li{
+	text-decoration: none;
 	padding:20px;
 	margin: 0 auto; 
+}
+.data-link ul{
+	list-style-type: none;
+}
+.data-link a{
+	color: white;
+	text-decoration: none;
 }
 
 
@@ -70,20 +86,24 @@ body{
 
 /* Track */
 ::-webkit-scrollbar-track {
-	box-shadow: inset 0 0 5px grey; 
+	box-shadow: inset 0 0 5px #1f1f1f; 
 	border-radius: 5px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	background: #f0da53; 
+	background: #515151; 
 	border-radius: #696969;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-	background: #363636; 
-
+	background: #b5b5b5; 
+}
+.link-conteudos:hover{
+     background: #c0392b;
+     border-radius: 5px;
+     width: 10px;
 }
 
 
