@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+*{
+	scroll-behavior: smooth;
+}
+
 body{
 	width: auto;
 	height: auto;
 	overflow-y: scroll;
-	scroll-behavior: smooth;
 	overflow-x: hidden;
 	background: #454549;
 	font-family: 'DotGothic16', sans-serif;
@@ -17,7 +21,7 @@ body{
 	font-size: 30px;
 	height: 180px;
 	width: 110%;
-	background-color: #161618;
+	background: linear-gradient(to right, #A0522D,#8B4513,#363636);
 	transform: skewY(-1.5deg);
 	color: #dddddd;
 }
@@ -42,25 +46,81 @@ body{
 	position: absolute;
 	left: 2%;
 	margin-top: 10%;
+	column-count: auto;
 }
 
 /*Sub conteudo dos sites como titulo para categorias*/
 .sub-content{
-	margin: 32vh;
-	column-count: 4;
+	margin-left: 100%;
+	margin-bottom: auto;
+	text-transform: uppercase;
+	height: auto;
+	width: auto;
+}
+
+/*.sub-content::after{
+	content: "";
+	position: absolute;
+	width: 150px;
+	height: 5px;
+	margin-top: -15px;
+	border-radius: 20px;
+	background-color: #BDB76B;
+	animation: changecolor 5s infinite;
+}*/
+
+.sub-content h2{
+	color: white;
+}
+
+/*card*/
+
+.content-card{
+	/*position: absolute;*/
+	background-color: red;
+	height: auto;
+	border-style: solid;
+	width: 140px;
+	margin: 20px;
+	padding: 20px;
+	border-radius: 5px;
+}
+
+/*description card*/
+
+.card-description{
+	margin: 5px;
+	text-align: left;
+	text-transform: lowercase;
+
+}
+
+.card-description::before{
+	content: "";
+	position: absolute;
+	height: 2px;
+	background: pink;
+	width: 80%;
+	margin-left: -25px;
 }
 
 /*Menu lateral de link*/
 .data-link{
 	float: right;
 	height: auto;
-	width:auto;
+	width:13%;
 	border-style: solid;
 	border-width: 1px;
 	border-color: grey;
 	border-radius: 10px;
 	padding: 30px;
 }
+
+.data-link h3{
+	color: white;
+	text-align: center;
+}
+
 
 /*Espaçamento entre cada link para menu lateral*/
 .data-link li{
@@ -75,6 +135,34 @@ body{
 	color: white;
 	text-decoration: none;
 }
+.link-content:hover{
+     background: #c0392b;
+     border-radius: 5px;
+     padding: 10px;
+}
+
+
+
+/*Animation para pseudoelemento*/
+@keyframes changecolor{
+	0%{
+	background:#F4A460;	
+	}
+	10%{
+		background: #CD853F;
+	}
+
+	40%{
+		background:#D2691E;
+	}
+	50%{
+		background:#A0522D;
+	}
+	100%{
+		background:#B8860B;
+	}
+}
+
 
 
 
@@ -92,19 +180,16 @@ body{
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	background: #515151; 
+	background: #B22222; 
 	border-radius: #696969;
+
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
 	background: #b5b5b5; 
 }
-.link-conteudos:hover{
-     background: #c0392b;
-     border-radius: 5px;
-     width: 10px;
-}
+
 
 
 /*Codigo para comportamento mobile*/
