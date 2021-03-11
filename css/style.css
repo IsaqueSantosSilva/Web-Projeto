@@ -40,80 +40,38 @@ body{
 
 /*Seleção do conteudo principal*/
 .main-content{
-	overflow: all;
-	width: auto;
-	height:auto;
-	position: absolute;
-	left: 2%;
-	margin-top: 10%;
-	column-count: auto;
+	margin-top: 160px;
+	
 }
 
 /*Sub conteudo dos sites como titulo para categorias*/
 .sub-content{
-	margin-left: 100%;
-	margin-bottom: auto;
-	text-transform: uppercase;
 	height: auto;
-	width: auto;
-}
-
-/*.sub-content::after{
-	content: "";
-	position: absolute;
-	width: 150px;
-	height: 5px;
-	margin-top: -15px;
-	border-radius: 20px;
-	background-color: #BDB76B;
-	animation: changecolor 5s infinite;
-}*/
-
-.sub-content h2{
-	color: white;
+	column-count: 4;
 }
 
 /*card*/
 
 .content-card{
-	/*position: absolute;*/
-	background-color: red;
-	height: auto;
-	border-style: solid;
-	width: 140px;
-	margin: 20px;
-	padding: 20px;
-	border-radius: 5px;
+	background-color: #F5DEB3;
 }
 
-/*description card*/
 
-.card-description{
-	margin: 5px;
-	text-align: left;
-	text-transform: lowercase;
-
-}
-
-.card-description::before{
-	content: "";
-	position: absolute;
-	height: 2px;
-	background: pink;
-	width: 80%;
-	margin-left: -25px;
-}
 
 /*Menu lateral de link*/
 .data-link{
-	float: right;
+	position: fixed;
+	top: 40px;
+	right: 5px;
 	height: auto;
-	width:13%;
+	width:auto;
 	border-style: solid;
 	border-width: 1px;
 	border-color: grey;
 	border-radius: 10px;
-	padding: 30px;
+	padding: 2px;
+	z-index: 900;
+	background-color: #FFDEAD;
 }
 
 .data-link h3{
@@ -141,27 +99,6 @@ body{
      padding: 10px;
 }
 
-
-
-/*Animation para pseudoelemento*/
-@keyframes changecolor{
-	0%{
-	background:#F4A460;	
-	}
-	10%{
-		background: #CD853F;
-	}
-
-	40%{
-		background:#D2691E;
-	}
-	50%{
-		background:#A0522D;
-	}
-	100%{
-		background:#B8860B;
-	}
-}
 
 
 
