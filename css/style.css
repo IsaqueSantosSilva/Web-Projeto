@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 
 *{
@@ -101,6 +102,37 @@ body{
 
 
 
+=======
+body{
+	height: auto;
+	width: auto;
+	margin: 0 auto;
+}
+.title-header h1{
+	font-size: 50px;
+	text-align: center;
+	background-color: black;
+	color: white;
+	animation: changecolor 6s infinite;
+}
+
+.main-content{
+	width: auto;
+	height: 100%;
+	margin: 50px;
+}
+
+.main-content table{
+	position: relative;
+	margin: 50px;
+}
+
+.main-content tr td{
+	padding: 50px;
+}
+
+
+>>>>>>> feature/layout-updates
 
 
 /*Personalização do scrollbar*/
@@ -127,6 +159,25 @@ body{
 	background: #b5b5b5; 
 }
 
+<<<<<<< HEAD
+=======
+/*Animation*/
+
+@keyframes changecolor{
+	0%  {
+		color: #808000;
+	}
+	25% { 
+		color: #BDB76B;
+	}
+	50% {
+		color: #CD853F;
+	}
+	100% {
+		color: #D2691E;
+	}
+}
+>>>>>>> feature/layout-updates
 
 
 /*Codigo para comportamento mobile*/
