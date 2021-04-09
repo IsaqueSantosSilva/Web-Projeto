@@ -1,0 +1,9 @@
+.login-data{
+	float: right;
+	padding: 20px;
+	border-style: hidden;
+	height: auto;
+	width: auto;
+	background-color: #33a252;
+	border-radius: 10px;
+}

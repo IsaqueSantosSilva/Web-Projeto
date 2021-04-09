@@ -1,183 +1,24 @@
-<<<<<<< HEAD
-@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
-
-*{
-	scroll-behavior: smooth;
-}
-
 body{
+	margin: 0 auto;
+	height: auto;
 	width: auto;
-	height: auto;
-	overflow-y: scroll;
-	overflow-x: hidden;
-	background: #454549;
-	font-family: 'DotGothic16', sans-serif;
 }
 
-/*Titulo do site*/
-/*Estilização prévia como teste*/
-.title-header{
-	margin-top: -75px;
-	margin-left: -10px;
-	font-size: 30px;
-	height: 180px;
-	width: 110%;
-	background: linear-gradient(to right, #A0522D,#8B4513,#363636);
-	transform: skewY(-1.5deg);
-	color: #dddddd;
-}
-
-.title-header h1{
-	transform: skewY(2deg);
-	padding: 28px;
-}
-.title-header h1:after{
-	margin-left: 20px;
-	content:url(../imgs/Icon.png);
-}
-/*Estilização prévia como teste*/
-
-
-
-/*Seleção do conteudo principal*/
-.main-content{
-	margin-top: 160px;
-	
-}
-
-/*Sub conteudo dos sites como titulo para categorias*/
-.sub-content{
-	height: auto;
-	column-count: 4;
-}
-
-/*card*/
-
-.content-card{
-	background-color: #F5DEB3;
-}
-
-
-
-/*Menu lateral de link*/
-.data-link{
-	position: fixed;
-	top: 40px;
-	right: 5px;
-	height: auto;
-	width:auto;
+form{
+	position: relative;
+	left: 35%;
+	width: 30%;
 	border-style: solid;
 	border-width: 1px;
-	border-color: grey;
-	border-radius: 10px;
-	padding: 2px;
-	z-index: 900;
-	background-color: #FFDEAD;
-}
-
-.data-link h3{
-	color: white;
-	text-align: center;
-}
-
-
-/*Espaçamento entre cada link para menu lateral*/
-.data-link li{
-	text-decoration: none;
-	padding:20px;
-	margin: 0 auto; 
-}
-.data-link ul{
-	list-style-type: none;
-}
-.data-link a{
-	color: white;
-	text-decoration: none;
-}
-.link-content:hover{
-     background: #c0392b;
-     border-radius: 5px;
-     padding: 10px;
-}
-
-
-
-=======
-body{
-	height: auto;
-	width: auto;
-	margin: 0 auto;
-}
-.title-header h1{
-	font-size: 50px;
-	text-align: center;
-	background-color: black;
-	color: white;
-	animation: changecolor 6s infinite;
-}
-
-.main-content{
-	width: auto;
-	height: 100%;
-	margin: 50px;
-}
-
-.main-content table{
-	position: relative;
-	margin: 50px;
-}
-
-.main-content tr td{
 	padding: 50px;
+	border-radius: 10px;
+	margin-top: 20px;
 }
 
-
->>>>>>> feature/layout-updates
-
-
-/*Personalização do scrollbar*/
-
-::-webkit-scrollbar {
-	width: 10px;
+form h2{
+	text-align: center;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-	box-shadow: inset 0 0 5px #1f1f1f; 
-	border-radius: 5px;
+form button{
+	margin-left: 20px;
 }
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-	background: #B22222; 
-	border-radius: #696969;
-
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-	background: #b5b5b5; 
-}
-
-<<<<<<< HEAD
-=======
-/*Animation*/
-
-@keyframes changecolor{
-	0%  {
-		color: #808000;
-	}
-	25% { 
-		color: #BDB76B;
-	}
-	50% {
-		color: #CD853F;
-	}
-	100% {
-		color: #D2691E;
-	}
-}
->>>>>>> feature/layout-updates
-
-
-/*Codigo para comportamento mobile*/
