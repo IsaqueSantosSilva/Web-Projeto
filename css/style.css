@@ -4,6 +4,18 @@ body{
 	width: auto;
 }
 
+header{
+	background-color: #282A2D;
+	margin-bottom: 50px;
+}
+
+header h1{
+	text-align: center;
+	padding: 50px;
+	color: white;
+	font-size: 35px;
+}
+
 form{
 	position: relative;
 	left: 35%;
