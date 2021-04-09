@@ -12,18 +12,15 @@ class UserRegister{
 		$this->name = $_SESSION['user'] = $_POST['username'];
 		$this->age = $_SESSION['age'] = $_POST['age'];
 		$this->pwd = $_SESSION['pwd'] = $_POST['pwd'];
-		$this->cpwd = $_SESSION['cpwd'] = $_POST['pwd'];
+		$this->cpwd = $_SESSION['cpwd'] = $_POST['cpwd'];
 	}
 
 	public function validatePassword(){
-
-		if ($_SESSION['pwd'] != $_SESSION['cpwd']) {
-			echo "Senhas não são iguais";
-			return;
+		if ($this->pwd != $this->cpwd) {
+			echo "As senhas não se conferem";
 		}else{
 			header("Location: ../login/index.php");
 		}
-
 	}
 
 }
