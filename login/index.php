@@ -13,6 +13,10 @@
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
+	<header>
+		<h1>Take mah money</h1>
+	</header>
+	
 	<form class="ui form" method="POST" action=" <? $_SERVER['PHP_SELF'] ?>">
 		<h2>Login</h2>
 		<div class="field">
