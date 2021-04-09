@@ -1,5 +1,9 @@
 <?php 
 session_start();
+
+if (isset($_POST['logoutbtn'])) {
+	header("Location: ../register/index.php");
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,9 +19,15 @@ session_start();
 		<label>
 			<?php echo "Usuário:" ."<i class='user icon'></i>"  . "<strong>" . $_SESSION['user'] . "</strong>" ?>
 		</label>
+		<div>
+			<a href="../register/index.php">Logout</a>
+		</div>		
 	</div>
 
-	<h1><i>NOME LOJA</i></h1>
+	<header>
+		<h1>Take mah money</h1>
+	</header>
+
 	<section>
 		<div class="ui cards">
 			<div class="card">
@@ -31,7 +41,7 @@ session_start();
 					</div>
 				</div>
 				<div class="ui vertical animated button" tabindex="0">
-					<div class="hidden content">Shop</div>
+					<div class="hidden content">Comprar</div>
 					<div class="visible content">
 						<i class="shop icon"></i>
 					</div>

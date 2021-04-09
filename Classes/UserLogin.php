@@ -15,7 +15,7 @@ class UserLogin{
 
 	public function validateLogin(){
 		if ($_SESSION['login_user'] == $_SESSION['user'] && $_SESSION['login_pwd'] ==$_SESSION['pwd']) {
-			header("Location: ../mainpage/mainstore.php");
+			header("Location: ../mainpage/index.php");
 		}else{
 			echo "Dados não se conferem";
 		}
