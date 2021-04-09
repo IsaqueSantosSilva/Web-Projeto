@@ -1,9 +1,30 @@
+header{
+	background-color: #282A2D;
+	margin-bottom: 50px;
+}
+
+header h1{
+	text-align: center;
+	padding: 50px;
+	color: white;
+	font-size: 35px;
+}
 .login-data{
 	float: right;
 	padding: 20px;
 	border-style: hidden;
 	height: auto;
-	width: auto;
-	background-color: #33a252;
+	width: 15%;
+	background-color: white;
 	border-radius: 10px;
+	margin-top: 20px;
+}
+
+.login-data button{
+	border-style: none;
+	background-color: green;
+}
+
+.login-data button:hover{
+	cursor: pointer;
 }
