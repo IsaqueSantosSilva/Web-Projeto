@@ -1,3 +1,8 @@
+body{
+	height: auto;
+	width: auto;
+}
+
 header{
 	background-color: #282A2D;
 	margin-bottom: 50px;
@@ -9,22 +14,28 @@ header h1{
 	color: white;
 	font-size: 35px;
 }
+
+section{
+	align-content: center;
+}
+
+section .ui.cards .card{
+	margin: 0 auto;
+}
+
+.ui.horizontal.divider{
+	font-size: 30px;
+	margin: 100px;
+	
+}
+
 .login-data{
 	float: right;
 	padding: 20px;
 	border-style: hidden;
 	height: auto;
-	width: 15%;
+	width: auto;
 	background-color: white;
 	border-radius: 10px;
 	margin-top: 20px;
-}
-
-.login-data button{
-	border-style: none;
-	background-color: green;
-}
-
-.login-data button:hover{
-	cursor: pointer;
 }
