@@ -37,7 +37,7 @@ if (isset($_POST['logoutbtn'])) {
 				<div class="content">
 					<div class="header">Big Smoke</div>
 					<div class="description">
-						I'll have two number 9s, a number 9 large, a number 6 with extra dip, a number 7, two number 45s, one with cheese, and a large soda.
+						I'll have two number 9s, a number 9 large, a number 6 with extra dip, a number 7, two number 45s, one with cheese, and a large soda. You picked the wrong house, fool! ...
 					</div>
 				</div>
 				<div class="ui vertical animated button" tabindex="0">
