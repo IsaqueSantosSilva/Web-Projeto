@@ -21,11 +21,11 @@
 		<h2>Login</h2>
 		<div class="field">
 			<label>Nome de Usuário</label>
-			<input type="text" name="login_user" placeholder="">
+			<input type="text" name="login_user" required placeholder="">
 		</div>
 		<div class="field">
 			<label>Senha</label>
-			<input type="password" name="login_pwd" placeholder="">
+			<input type="password" name="login_pwd" required placeholder="">
 		</div>
 		
 		<button class="ui black button" name="btn1" type="submit">Enviar</button>
