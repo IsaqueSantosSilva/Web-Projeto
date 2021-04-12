@@ -204,7 +204,7 @@ if (isset($_POST['logoutbtn'])) {
 				<div class="content">
 					<div class="header">The Room</div>
 					<div class="description">
-					The Room is a puzzle video game developed by Fireproof Games. The game was originally developed for the iOS platform and released in September 2012. The Android version debuted as part of a Humble Bundle in March 2013 and was subsequently released on Google Play.
+					The Room is a puzzle video game developed by Fireproof Games. The game was originally developed for the iOS platform and released in September 2012. The Android version debuted as part of a Humble Bundle in March 2013.
 					</div>
 				</div>
 				<div class="ui vertical animated button" tabindex="0">
