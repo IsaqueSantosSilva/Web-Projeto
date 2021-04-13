@@ -29,19 +29,19 @@ if (isset($_POST['logoutbtn'])) {
 	</header>
 <!-- Divisor de conteudo -->
 	<div class="ui horizontal divider">
-		ADVENTURE
+		Aventura
 	</div>
 	<section>
 			<!-- HORIZON ZERO DAWN -->
 			<div class="ui cards">
 				<div class="card">
 				<div class="ui image">
-					<img src="covers/adventure/hzd.jpg">
+					<img src="covers/aventura/hzd.jpg">
 				</div>
 				<div class="content">
 					<div class="header">Horizon Zero Dawn</div>
 					<div class="description">
-					Horizon Zero Dawn is a 2017 action role-playing game developed by Guerrilla Games and published by Sony Interactive Entertainment. The plot follows Aloy, a young hunter in a world overrun by machines, who sets out to uncover her past.
+					Horizon Zero Dawn™ é um RPG de aventura e ação vencedor de vários prêmios – e esta Edição Completa inclui a expansão The Frozen Wilds, com novos territórios e novas habilidades, armas e Máquinas.
 					</div>
 				</div>
 				<div class="ui vertical animated button" tabindex="0">
@@ -54,12 +54,12 @@ if (isset($_POST['logoutbtn'])) {
             <!-- LIFE IS STRANGE -->
 			<div class="card">
 				<div class="ui image">
-					<img src="covers/adventure/lis.jpg">
+					<img src="covers/aventura/lis.jpg">
 				</div>
 				<div class="content">
 					<div class="header">Life is Strange</div>
 					<div class="description">
-					Life Is Strange is a series of episodic graphic adventure games published by Square Enix's European subsidiary. Created by Dontnod Entertainment, the series debuted with the eponymous first installment, which released episodically in five chapters across 2015
+					Life is Strange é uma premiada aventura em episódios, aclamada pela crítica, que permite ao jogador voltar no tempo e alterar passado, presente e futuro. Siga a história de Max Caulfield, uma estudante de fotografia que descobre ser capaz de rebobinar o tempo ao salvar a melhor amiga, Chloe Price.
 					</div>
 				</div>
 				<div class="ui vertical animated button" tabindex="0">
@@ -72,12 +72,12 @@ if (isset($_POST['logoutbtn'])) {
 				<!-- SHADOW OF THE COLOSSUS -->
 			<div class="card">
 				<div class="ui image">
-					<img src="covers/adventure/sotc.jpg">
+					<img src="covers/aventura/sotc.jpg">
 				</div>
 				<div class="content">
 					<div class="header">Shadow of the Colossus</div>
 					<div class="description">
-					Shadow of the Colossus, released in Japan as Wander and the Colossus, is an action-adventure game developed by Japan Studio and Team Ico, and published by Sony Computer Entertainment for the PlayStation 2. The game was released in North America and Japan in October 2005 and PAL regions in February 2006.
+					Shadow of the Colossus, lançado no Japão como Wander and the Colossus é um jogo eletrônico de ação-aventura desenvolvido pela SCE Japan Studio e publicado pela Sony Computer Entertainment para o PlayStation 2. O jogo foi lançado na América do Norte e no Japão em outubro de 2005 e em territórios PAL em fevereiro de 2006.
 					</div>
 				</div>
 				<div class="ui vertical animated button" tabindex="0">
@@ -99,12 +99,12 @@ if (isset($_POST['logoutbtn'])) {
 		<div class="ui cards">
 			<div class="card">
 				<div class="ui image">
-					<img src="covers/horror/bw.jpg">
+					<img src="covers/terror/bw.jpg">
 				</div>
 				<div class="content">
 					<div class="header">Blair Witch</div>
 					<div class="description">
-					Blair Witch is a psychological survival horror video game developed by Bloober Team based on the Blair Witch series of horror films. It was published by Lionsgate Games for Microsoft Windows, Xbox One and Xbox Game Pass on August 30, 2019.
+					O ano é 1996. Um menino desaparece na Floresta Black Hills, perto de Burkittsville, no estado americano de Maryland. Você interpreta Ellis, um ex-policial com um passado conturbado, que participa da busca pela floresta. O que começa como uma simples investigação logo torna-se um pesadelo sem fim, tendo de enfrentar seus medos e a Bruxa de Blair, uma força misteriosa que assombra os bosques...
 					</div>
 				</div>
 				<div class="ui vertical animated button" tabindex="0">
@@ -117,12 +117,12 @@ if (isset($_POST['logoutbtn'])) {
 			<!-- DEAD SPACE 3 -->
 			<div class="card">
 				<div class="ui image">
-					<img src="covers/horror/ds3.jpg">
+					<img src="covers/terror/ds3.jpg">
 				</div>
 				<div class="content">
 					<div class="header">Dead Space 3</div>
 					<div class="description">
-					Dead Space 3 is a science fiction survival horror action-adventure video game developed by Visceral Games and published by Electronic Arts. Announced at E3 2012 and released internationally in February 2013, it is the sequel to Dead Space 2 and the third main entry in the Dead Space series.
+					Viaje pelo espaço até o planeta gelado de Tau Volantis com Isaac Clarke e o sargento John Carver para encontrar e destruir a fonte do surto Necromorph. Vasculhe o ambiente hostil em busca de materiais brutos e recolha peças para criar as armas e ferramentas de sobrevivência definitivas – vai precisar delas se Isaac e Carver quiserem sair vivos do planeta. E os Necromorphs são apenas um dos muitos inimigos que vai enfrentar desta vez.
 					</div>
 				</div>
 				<div class="ui vertical animated button" tabindex="0">
@@ -135,12 +135,12 @@ if (isset($_POST['logoutbtn'])) {
 			<!-- RESIDENT EVIL 7 -->
 			<div class="card">
 				<div class="ui image">
-					<img src="covers/horror/re7.jpg">
+					<img src="covers/terror/re7.jpg">
 				</div>
 				<div class="content">
 					<div class="header">Resident Evil 7</div>
 					<div class="description">
-					Resident Evil 7 is a 2017 survival horror game developed and published by Capcom. The ninth major installment in the Resident Evil series, Resident Evil 7 diverges from the more action-oriented Resident Evil 5 and Resident Evil 6, returning to the franchise's survival horror roots, emphasizing exploration.
+					Resident Evil 7 biohazard é o próximo grande lançamento da renomada série Resident Evil e cria um novo curso para a franquia ao trazer à tona suas raízes e abrir a porta pra uma experiência de horror realmente aterrorizante. Uma mudança dramática na série para uma visão em primeira pessoa em um estilo fotorrealista, gerido pelo novo RE Engine da Capcom, Resident Evil 7 traz um nível de imersão sem precedentes que torna a trama de horror mais próxima e pessoal.
 					</div>
 				</div>
 				<div class="ui vertical animated button" tabindex="0">
@@ -155,7 +155,7 @@ if (isset($_POST['logoutbtn'])) {
 
 	<!-- Divisor de conteudo -->
 	<div class="ui horizontal divider">
-		Puzzle
+	Quebra-Cabeça
 	</div>
 
 	<section>
@@ -163,12 +163,12 @@ if (isset($_POST['logoutbtn'])) {
 		<div class="ui cards">
 			<div class="card">
 				<div class="ui image">
-					<img src="covers/puzzle/tu.jpg">
+					<img src="covers/quebra-cabeca/tu.jpg">
 				</div>
 				<div class="content">
 					<div class="header">Tetris Ultimate</div>
 					<div class="description">
-					Tetris Ultimate is a puzzle video game developed by American studio SoMa Play and published by Ubisoft. Ubisoft partnered with The Tetris Company to develop the game to celebrate the 30th anniversary of the Tetris franchise.
+					O jogo de quebra-cabeça mais adorado do mundo chega aos consoles da nova geração, e está melhor do que nunca, em Tetris Ultimate. Com seis modos incríveis, novos recursos divertidos e gráficos exclusivos, a evolução desse jogo icônico só podia se realizar nos consoles da nova geração.
 					</div>
 				</div>
 				<div class="ui vertical animated button" tabindex="0">
@@ -181,12 +181,12 @@ if (isset($_POST['logoutbtn'])) {
 		<!-- TANGRAM -->
 			<div class="card">
 				<div class="ui image">
-					<img src="covers/puzzle/tangram.jpg">
+					<img src="covers/quebra-cabeca/tangram.jpg">
 				</div>
 				<div class="content">
 					<div class="header">Tangram</div>
 					<div class="description">
-					The tangram is a dissection puzzle consisting of seven flat polygons, called tans, which are put together to form shapes. The objective is to replicate a pattern generally found in a puzzle book using all seven pieces without overlap.
+					O Tangram é um quebra-cabeças geométrico chinês formado por 7 peças, chamadas tans: são 2 triângulos grandes, 2 pequenos, 1 médio, 1 quadrado e 1 paralelogramo. Utilizando todas essas peças sem sobrepô-las, podemos formar várias figuras. Segundo a Enciclopédia do Tangram é possível montar mais de 5000 figuras.
 					</div>
 				</div>
 				<div class="ui vertical animated button" tabindex="0">
@@ -199,12 +199,204 @@ if (isset($_POST['logoutbtn'])) {
 
 			<div class="card">
 				<div class="ui image">
-					<img src="covers/puzzle/tr.jpg">
+					<img src="covers/quebra-cabeca/tr.jpg">
 				</div>
 				<div class="content">
 					<div class="header">The Room</div>
 					<div class="description">
-					The Room is a puzzle video game developed by Fireproof Games. The game was originally developed for the iOS platform and released in September 2012. The Android version debuted as part of a Humble Bundle in March 2013.
+					Caia num mundo de engenhocas bizarras e máquinas alquímicas com The Room, o quebra-cabeça 3D vencedor do BAFTA, produzido pela Fireproof Games. Siga um rastro de cartas enigmáticas e resolva muitos dispositivos únicos em lugares ainda mais extraordinários, em uma viagem através do tempo em que a máquina encontra o mito.
+					</div>
+				</div>
+				<div class="ui vertical animated button" tabindex="0">
+					<div class="hidden content">Comprar</div>
+					<div class="visible content">
+						<i class="shop icon"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Divisor de conteudo -->
+	<div class="ui horizontal divider">
+		Corrida 
+	</div>
+
+	<section>
+		<!-- NEED FOR SPEED -->
+		<div class="ui cards">
+			<div class="card">
+				<div class="ui image">
+					<img src="covers/corrida/speed.jpg">
+				</div>
+				<div class="content">
+					<div class="header">Need for Speed</div>
+					<div class="description">
+					Tudo pronto para dominar as ruas? Sente-se atrás do volante de carros icônicos e acelera por Ventura Bay, uma grande área urbana. Explore histórias interconectadas à medida que constrói sua reputação – e seu carro dos sonhos – e se torna um dos maiores ícones de corrida. Jogue de novo e de novo porque, desta vez, você tem 5 maneiras diferentes de vencer.
+					</div>
+				</div>
+				<div class="ui vertical animated button" tabindex="0">
+					<div class="hidden content">Comprar</div>
+					<div class="visible content">
+						<i class="shop icon"></i>
+					</div>
+				</div>
+			</div>
+		<!-- ASPHALT -->
+			<div class="card">
+				<div class="ui image">
+					<img src="covers/corrida/a8.jpg">
+				</div>
+				<div class="content">
+					<div class="header">Asphalt 8: Airborne</div>
+					<div class="description">
+					Satisfaça sua sede de corrida e competição e mostre que não veio a passeio em Asphalt 8: +290 veículos de luxo licenciados, corridas cheias de ação, +75 pistas, jogabilidade online e off-line. Esta simulação de corrida de competição traz modos solo e multijogador e muitas outras oportunidades de derrapar no asfalto da estrada.
+					</div>
+				</div>
+				<div class="ui vertical animated button" tabindex="0">
+					<div class="hidden content">Comprar</div>
+					<div class="visible content">
+						<i class="shop icon"></i>
+					</div>
+				</div>
+			</div>
+		<!-- THE CREW 2 -->
+			<div class="card">
+				<div class="ui image">
+					<img src="covers/corrida/tc2.jpg">
+				</div>
+				<div class="content">
+					<div class="header">The Crew 2</div>
+					<div class="description">
+					O The Crew® 2 é o mais recente capítulo desta série revolucionária e capta todas as emoções dos desportos motorizados americanos num dos mundos abertos mais empolgantes de sempre. Bem-vindo à Motornation, um recreio enorme, variado, belo e repleto de ação construído para os desportos motorizados e que atravessa os EUA. Desfruta de uma liberdade sem limites em terra, mar e ar.
+					</div>
+				</div>
+				<div class="ui vertical animated button" tabindex="0">
+					<div class="hidden content">Comprar</div>
+					<div class="visible content">
+						<i class="shop icon"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+	<!-- Divisor de conteudo -->
+	<div class="ui horizontal divider">
+		Esportes
+	</div>
+
+		<!-- FIFA 16 -->
+		<div class="ui cards">
+			<div class="card">
+				<div class="ui image">
+					<img src="covers/esportes/ff16.jpg">
+				</div>
+				<div class="content">
+					<div class="header">Fifa 16</div>
+					<div class="description">
+					Crie mais momentos mágicos do que nunca com o FIFA 16. Deixe todas as partidas memoráveis com controle aprimorado no meio-campo, movimentos melhorados na defesa, mais estrelas e uma nova maneira de jogar. Monte seu time dos sonhos no FIFA Ultimate Team ou dispute com uma das 12 seleções femininas, pela primeira vez na série FIFA, incluindo Brasil, Alemanha, EUA, França, Suécia, Inglaterra e outros.
+					</div>
+				</div>
+				<div class="ui vertical animated button" tabindex="0">
+					<div class="hidden content">Comprar</div>
+					<div class="visible content">
+						<i class="shop icon"></i>
+					</div>
+				</div>
+			</div>
+		<!-- PES 19 -->
+			<div class="card">
+				<div class="ui image">
+					<img src="covers/esportes/pes.jpg">
+				</div>
+				<div class="content">
+					<div class="header">Pro Evolution Soccer 2019</div>
+					<div class="description">
+					'O Poder Do Futebol' é a principal mensagem que engloba todas as novidades que estão chegando no PES 2019, o que ocorre graças ao compromisso de lançar a nova versão exclusivamente para os consoles da atual geração. Isso permite que o PES recrie o futebol de uma forma nunca antes vista, dando suporte para a tecnologia 4K HDR em todas as plataformas e oferecendo recursos visuais e movimentos totalmente realistas.
+					</div>
+				</div>
+				<div class="ui vertical animated button" tabindex="0">
+					<div class="hidden content">Comprar</div>
+					<div class="visible content">
+						<i class="shop icon"></i>
+					</div>
+				</div>
+			</div>
+		<!-- ROCKET LEAGUE -->
+			<div class="card">
+				<div class="ui image">
+					<img src="covers/esportes/rl.jpg">
+				</div>
+				<div class="content">
+					<div class="header">Rocket League</div>
+					<div class="description">
+					Rocket League mistura carros de corrida e futebol em arenas fechadas. Com modos online e offline, o game virou uma febre entre os jogadores por ser divertido e fácil de jogar.
+					</div>
+				</div>
+				<div class="ui vertical animated button" tabindex="0">
+					<div class="hidden content">Comprar</div>
+					<div class="visible content">
+						<i class="shop icon"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+	<!-- Divisor de conteudo -->
+	<div class="ui horizontal divider">
+		Simulador
+	</div>
+
+		<!-- FIFA 16 -->
+		<div class="ui cards">
+			<div class="card">
+				<div class="ui image">
+					<img src="covers/simulador/fs.jpg">
+				</div>
+				<div class="content">
+					<div class="header">Microsoft Flight Simulator</div>
+					<div class="description">
+					Crie mais momentos mágicos do que nunca com o FIFA 16. Deixe todas as partidas memoráveis com controle aprimorado no meio-campo, movimentos melhorados na defesa, mais estrelas e uma nova maneira de jogar. Monte seu time dos sonhos no FIFA Ultimate Team ou dispute com uma das 12 seleções femininas, pela primeira vez na série FIFA, incluindo Brasil, Alemanha, EUA, França, Suécia, Inglaterra e outros.
+					</div>
+				</div>
+				<div class="ui vertical animated button" tabindex="0">
+					<div class="hidden content">Comprar</div>
+					<div class="visible content">
+						<i class="shop icon"></i>
+					</div>
+				</div>
+			</div>
+		<!-- PES 19 -->
+			<div class="card">
+				<div class="ui image">
+					<img src="covers/simulador/arma.jpg">
+				</div>
+				<div class="content">
+					<div class="header">Arma 3</div>
+					<div class="description">
+					Experimente uma verdadeira jogabilidade de combate em um mundo aberto militar de multijogador. Com uma enorme variedade de conteúdo para um ou mais jogadores, mais de 20 veículos e 40 armas, além de oportunidades ilimitadas de criação de conteúdo, esse é um dos melhores jogos militares para PC. Autêntico, diverso, aberto - o Arma 3 envia você para a guerra.
+
+					</div>
+				</div>
+				<div class="ui vertical animated button" tabindex="0">
+					<div class="hidden content">Comprar</div>
+					<div class="visible content">
+						<i class="shop icon"></i>
+					</div>
+				</div>
+			</div>
+		<!-- ROCKET LEAGUE -->
+			<div class="card">
+				<div class="ui image">
+					<img src="covers/simulador/cs.jpg">
+				</div>
+				<div class="content">
+					<div class="header">Cities: Skylines</div>
+					<div class="description">
+					Cities: Skylines é uma versão moderna dos simuladores de cidade clássicos. O jogo introduz novos elementos de jogabilidade para que você sinta a emoção e a dificuldade de criar e manter uma cidade de verdade, além de aprimorar os elementos clássicos da construção de cidades. 
 					</div>
 				</div>
 				<div class="ui vertical animated button" tabindex="0">
