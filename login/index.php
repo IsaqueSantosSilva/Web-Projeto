@@ -2,7 +2,7 @@
 	require'../Classes/UserLogin.php';
 
 	if (isset($_POST['btn1'])) {
-		(new UserLogin())->validateLogin();
+		(new UserLogin())->validateOnlineLogin();
 	}
  ?>
 <!DOCTYPE html>
@@ -27,7 +27,7 @@
 			<label>Senha</label>
 			<input type="password" name="login_pwd" required placeholder="">
 		</div>
-		
+		<a href="../register/index.php" style="text-decoration: none;">Já possui cadastro?</a>
 		<button class="ui black button" name="btn1" type="submit">Enviar</button>
 	</form>
 </body>

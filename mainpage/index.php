@@ -17,7 +17,7 @@ if (isset($_POST['logoutbtn'])) {
 <body>
 	<div class="login-data">
 		<label>
-			<?php echo "Usuário:" ."<i class='user icon'></i>"  . "<strong>" . $_SESSION['user'] . "</strong>" ?>
+			<?php echo "Usuário:" ."<i class='user icon'></i>"  . "<strong>" . $_SESSION['login_user'] . "</strong>" ?>
 		</label>
 		<div>
 			<a href="../register/index.php">Logout</a>
