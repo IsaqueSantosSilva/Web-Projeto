@@ -1,7 +1,7 @@
 <?php 
 require '../Classes/UserRegister.php';
 if (isset($_POST['btn'])) {
-	(new UserRegister())->validatePassword();
+	(new UserRegister())->insertRegisterData();
 }
 ?>
 <!DOCTYPE html>
@@ -24,7 +24,7 @@ if (isset($_POST['btn'])) {
 		</div>
 		<div class="field">
 			<label>Idade</label>
-			<input type="text" name="age" required>
+			<input type="text" name="age" required min="10" max="80" maxlength="2">
 		</div>
 		<div class="field">
 			<label>Senha</label>
