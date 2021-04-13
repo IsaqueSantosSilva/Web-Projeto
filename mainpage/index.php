@@ -75,7 +75,7 @@ if (isset($_POST['logoutbtn'])) {
 					<img src="covers/adventure/sotc.jpg">
 				</div>
 				<div class="content">
-					<div class="header">Big Smoke</div>
+					<div class="header">Shadow of the Colossus</div>
 					<div class="description">
 					Shadow of the Colossus, released in Japan as Wander and the Colossus, is an action-adventure game developed by Japan Studio and Team Ico, and published by Sony Computer Entertainment for the PlayStation 2. The game was released in North America and Japan in October 2005 and PAL regions in February 2006.
 					</div>
