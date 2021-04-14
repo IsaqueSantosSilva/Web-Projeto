@@ -10,6 +10,7 @@ if (isset($_POST['logoutbtn'])) {
 <head>
 	<title>Loja Principal</title>
 	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/mainstore.css">
 </head>
@@ -408,6 +409,22 @@ if (isset($_POST['logoutbtn'])) {
 			</div>
 		</div>
 	</section>
+	<!-- BOTÃO DE TOPO -->
+	<section>
+		<a class="paraotopo" href="#"> <i class="fas fa-arrow-up"></i> </a> <!-- POR ALGUM OUTRO MOTIVO O BOTÃO "PARA O TOPO" SÓ FUNCIONA SE EU USAR ISSO!-->
+	     </section>
+		 
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+         <script type="text/javascript"> 
+
+          $(function(){
+          	$(".menu a").on('click',function(){
+                  $("html, body").animate({
+                  	scrollTop:$($.attr(this,'href')).offset().top
+                  }, 500); //500 = 1 second
+          	});
+          });
+         </script>
 
 
 
