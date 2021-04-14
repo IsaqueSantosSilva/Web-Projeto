@@ -29,7 +29,9 @@ if (isset($_POST['logoutbtn'])) {
         	<li><a class="Navlinks" href="#simulador">Simulador</a></li>
            	
           </ul> -->
-       </nav>
+       <!-- </nav> -->
+ </div>
+
 	<!-- Divisor de conteudo -->
 	<div class="login-data">
 		<label>
