@@ -2,6 +2,9 @@ body{
 	height: auto;
 	width: auto;
 }
+html{
+	scroll-behavior: smooth;
+}
 
 header{
 	background-color: #282A2D;
@@ -54,4 +57,70 @@ section .ui.cards .card{
 	line-height: 50px;
    color: white;
    font-size: 22px;   
+}
+
+/* BOTAO AUTO NAVEGACAO */
+
+.Navlinks{
+	font-size: 19px;
+}
+.CardNavMenu2 nav ul{
+	padding-bottom: 50px;
+	position: relative;
+}
+nav ul{
+	margin-left: 450px;
+	align-content : center
+}
+.CardNavMenu {
+  	border-radius: 5px 5px 5px 5px;
+  	border:1px solid #fff;
+  	line-height: 20px;
+  	text-align: center;
+  	float: left;
+  	color: #fff;
+  	font-size: 17px;
+  	position: absolute;
+}
+  .CardNavMenu ul li{
+    margin: 10px;
+    border-radius: 5px 5px 5px 5px;
+  	border:1px solid #fff;
+  	line-height: 20px;
+  	float: left;
+  	color: #fff;
+  	font-size: 17px;	
+  	background-color: black;
+  }
+.CardNavMenu ul li:hover{
+	background:crimson;
+	text-decoration: none;
+}
+nav{
+	position: fixed;
+}
+
+ul{
+margin-left: 250px;
+
+}
+
+ul li{
+	list-style: none;
+	display: inline;
+	line-height: 150px;
+	left: 200px;
+	padding: 0 30px; /*PODE SER USADO PARA DA ESPAÇO */
+
+}
+ul li a{
+	text-decoration: none; /* TIRA A LINHA DO TEXTO */
+	font-size: 30px;
+	font-family: impact;
+	color: white;
+	text-shadow: 2px 2px 0px black;
+
+}
+ul li a:hover{  /*MUDA O EFEITO QUANDO PASSA COM O MAUSE */
+color: red;
 }

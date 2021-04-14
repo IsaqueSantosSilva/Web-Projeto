@@ -16,6 +16,20 @@ if (isset($_POST['logoutbtn'])) {
 </head>
 
 <body>
+	<!-- BOTAO AUTO NAVEGACAO -->
+<div class="CardNavMenu">
+	   <nav>
+		      <ul class="UlMenu">
+           	<li><a class="Navlinks" href="#aventura">Aventura</a></li>
+           	<li><a class="Navlinks" href="#terror">Terror</a></li>
+           	<li><a class="Navlinks" href="#quebracabeca">Quebra-Cabeça</a></li>
+           	<li><a class="Navlinks" href="#corrida">Corrida</a></li>
+			<li><a class="Navlinks" href="#esportes">Esportes</a></li>
+        	<li><a class="Navlinks" href="#simulador">Simulador</a></li>
+           	
+          </ul>
+       </nav>
+	<!-- Divisor de conteudo -->
 	<div class="login-data">
 		<label>
 			<?php echo "Usuário:" ."<i class='user icon'></i>"  . "<strong>" . $_SESSION['login_user'] . "</strong>" ?>
@@ -28,8 +42,8 @@ if (isset($_POST['logoutbtn'])) {
 	<header>
 		<h1>Take mah money</h1>
 	</header>
-<!-- Divisor de conteudo -->
-	<div class="ui horizontal divider">
+	<!-- Divisor de conteudo -->
+	<div class="ui horizontal divider" id="aventura">
 		Aventura
 	</div>
 	<section>
@@ -91,7 +105,7 @@ if (isset($_POST['logoutbtn'])) {
 		</div>
 	</section>
 	<!-- Divisor de conteudo -->
-	<div class="ui horizontal divider">
+	<div class="ui horizontal divider" id="terror">
 		Terror
 	</div>
 
@@ -155,7 +169,7 @@ if (isset($_POST['logoutbtn'])) {
 	</section>
 
 	<!-- Divisor de conteudo -->
-	<div class="ui horizontal divider">
+	<div class="ui horizontal divider" id="quebracabeca">
 	Quebra-Cabeça
 	</div>
 
@@ -218,7 +232,7 @@ if (isset($_POST['logoutbtn'])) {
 		</div>
 	</section>
 	<!-- Divisor de conteudo -->
-	<div class="ui horizontal divider">
+	<div class="ui horizontal divider" id="corrida">
 		Corrida 
 	</div>
 
@@ -283,7 +297,7 @@ if (isset($_POST['logoutbtn'])) {
 
 	<section>
 	<!-- Divisor de conteudo -->
-	<div class="ui horizontal divider">
+	<div class="ui horizontal divider" id="esportes">
 		Esportes
 	</div>
 
@@ -347,7 +361,7 @@ if (isset($_POST['logoutbtn'])) {
 
 	<section>
 	<!-- Divisor de conteudo -->
-	<div class="ui horizontal divider">
+	<div class="ui horizontal divider" id="simulador">
 		Simulador
 	</div>
 
@@ -413,7 +427,6 @@ if (isset($_POST['logoutbtn'])) {
 	<section>
 		<a class="paraotopo" href="#"> <i class="fas fa-arrow-up"></i> </a> <!-- POR ALGUM OUTRO MOTIVO O BOTÃO "PARA O TOPO" SÓ FUNCIONA SE EU USAR ISSO!-->
 	     </section>
-		 
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
          <script type="text/javascript"> 
 
@@ -425,8 +438,6 @@ if (isset($_POST['logoutbtn'])) {
           	});
           });
          </script>
-
-
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
