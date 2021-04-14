@@ -10,7 +10,8 @@ if (isset($_POST['logoutbtn'])) {
 <head>
 	<title>Loja Principal</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+	<!-- CSS PARA O BOTAO SCROLL TO THE TOP -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"> 
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/mainstore.css">
 </head>
