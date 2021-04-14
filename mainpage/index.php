@@ -19,7 +19,7 @@ if (isset($_POST['logoutbtn'])) {
 <body>
 	<!-- BOTAO AUTO NAVEGACAO -->
 <div class="CardNavMenu">
-	   <nav>
+	   <!-- <nav>
 		      <ul class="UlMenu">
            	<li><a class="Navlinks" href="#aventura">Aventura</a></li>
            	<li><a class="Navlinks" href="#terror">Terror</a></li>
@@ -28,7 +28,7 @@ if (isset($_POST['logoutbtn'])) {
 			<li><a class="Navlinks" href="#esportes">Esportes</a></li>
         	<li><a class="Navlinks" href="#simulador">Simulador</a></li>
            	
-          </ul>
+          </ul> -->
        </nav>
 	<!-- Divisor de conteudo -->
 	<div class="login-data">
