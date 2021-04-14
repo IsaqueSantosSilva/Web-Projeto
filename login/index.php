@@ -1,10 +1,10 @@
 <?php 
-	require'../Classes/UserLogin.php';
+require'../Classes/UserLogin.php';
 
-	if (isset($_POST['btn1'])) {
-		(new UserLogin())->validateOnlineLogin();
-	}
- ?>
+if (isset($_POST['btn1'])) {
+	(new UserLogin())->validateOnlineLogin();
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,8 +27,13 @@
 			<label>Senha</label>
 			<input type="password" name="login_pwd" required placeholder="">
 		</div>
-		<a href="../register/index.php" style="text-decoration: none;">Já possui cadastro?</a>
-		<button class="ui black button" name="btn1" type="submit">Enviar</button>
+		<a href="../register/index.php" style="text-decoration: none;">Não possui cadastro?</a>
+		<div class="position-button">
+			<button class="ui black button" name="btn1" type="submit">
+				<i class="paper plane outline icon"></i>
+				Login
+			</button>
+		</div>
 	</form>
 </body>
 </html>

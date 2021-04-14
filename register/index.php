@@ -36,7 +36,12 @@ if (isset($_POST['btn'])) {
 		</div>
 		<a href="../login/index.php">Já possui uma conta?</a>
 
-		<button class="ui black button" name="btn" type="submit">Enviar</button>
+		<div class="position-button">
+			<button class="ui black button" name="btn" type="submit">
+				<i class="paper plane outline icon"></i>
+				Cadastrar
+			</button>
+		</div>
 	</form>
 
 
