@@ -20,19 +20,19 @@ if (isset($_POST['btn'])) {
 		<h2>Cadastro</h2>
 		<div class="field">
 			<label>Nome de Usuário</label>
-			<input type="text" name="username" required>
+			<input type="text" name="username" placeholder="Utilize letras e numeros" required>
 		</div>
 		<div class="field">
 			<label>Idade</label>
-			<input type="text" name="age" required min="10" max="80" maxlength="2">
+			<input id="age" type="text" name="age" placeholder="Minimo 14 anos" required maxlength="2">
 		</div>
 		<div class="field">
 			<label>Senha</label>
-			<input type="password" name="pwd" required>
+			<input type="password" maxlength="8" placeholder="Min 6 e Max 8 caracteres" name="pwd" required>
 		</div>
 		<div class="field">
 			<label>Confirmar Senha</label>
-			<input type="password" name="cpwd" required>
+			<input type="password" placeholder="Confirme sua senha" maxlength="8" name="cpwd" required>
 		</div>
 		<a href="../login/index.php">Já possui uma conta?</a>
 
@@ -49,7 +49,9 @@ if (isset($_POST['btn'])) {
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+	<script type="text/javascript" src="../js/script.js"></script>
 	<script type="text/javascript">
+		// Show modal
 		$('.ui.basic.modal').modal('show');
 	</script>
 </body>
