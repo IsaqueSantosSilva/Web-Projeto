@@ -35,5 +35,14 @@ if (isset($_POST['btn1'])) {
 			</button>
 		</div>
 	</form>
+
+
+	
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+	<script type="text/javascript">
+		$('.ui.basic.modal').modal('show');
+	</script>
 </body>
 </html>

@@ -37,9 +37,7 @@ form h2{
 .position-button{
 	position: relative;
 	left: calc(100% - 65%);
-}
-
-.position-button button{
-	width: 155px;
+	margin: 28px auto;
+	margin-left: -12px;
 
 }
