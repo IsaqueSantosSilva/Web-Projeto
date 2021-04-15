@@ -27,7 +27,21 @@ class UserLogin{
 		if ($user == $row['name'] && $password == $row['password']) {
 			header("Location: ../mainpage/index.php");
 		}else{
-			echo "Dados não se conferem";
+			echo '<div class="ui basic modal" style=" display:none">
+					<div class="ui icon header">
+					<i class="x red icon"></i>
+					Dados incorretos
+				  </div>
+				<div class="content">
+					<p>Dados de login não se conferem... Verifique seus dados ou crie uma nova conta</p>
+				</div>
+				<div class="actions">
+					<div class="ui green ok inverted button">
+					<i class="checkmark icon"></i>
+						Ok
+					</div>
+				</div>
+				</div>';
 		}
 	}
 }

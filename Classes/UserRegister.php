@@ -35,10 +35,38 @@ class UserRegister{
 			$inst->bindValue(':c_password', $_SESSION['cpwd']);
 			
 			if ($_SESSION['pwd'] != $_SESSION['cpwd']) {
-				echo "Senhas não se conferem";
+				echo '<div class="ui basic modal" style=" display:none">
+					<div class="ui icon header">
+					<i class="x red icon"></i>
+					Senha
+				  </div>
+				<div class="content">
+					<p>As senhas inseridas não são iguais... </p>
+				</div>
+				<div class="actions">
+					<div class="ui green ok inverted button">
+					<i class="checkmark icon"></i>
+						Ok
+					</div>
+				</div>
+				</div>';
 			}else{
 				$inst->execute();
-				echo "Dados cadastrados com sucesso";
+				echo '<div class="ui basic modal" style=" display:none">
+					<div class="ui icon header">
+					<i class="sucesses green icon"></i>
+					Conta cadastrada
+				  </div>
+				<div class="content">
+					<p>Sua conta foi criada com sucesso... Porfavor fazer Login</p>
+				</div>
+				<div class="actions">
+					<div class="ui green ok inverted button">
+					<i class="checkmark icon"></i>
+						Ok
+					</div>
+				</div>
+				</div>';
 			}
 		}
 	}
