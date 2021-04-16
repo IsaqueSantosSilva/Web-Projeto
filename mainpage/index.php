@@ -36,7 +36,7 @@ if (isset($_POST['logoutbtn'])) {
 	<div class="hidden-content"></div>
 	
 	<div class="ui horizontal divider">
-		Aventura
+		<p style="color:white;">Aventura</p> 
 	</div>
 	<section>
 		<!-- HORIZON ZERO DAWN -->
@@ -98,7 +98,7 @@ if (isset($_POST['logoutbtn'])) {
 	</section>
 	<!-- Divisor de conteudo -->
 	<div class="ui horizontal divider">
-		Terror
+		<p style="color:white;">Terror</p>
 	</div>
 
 	<section>
@@ -162,7 +162,7 @@ if (isset($_POST['logoutbtn'])) {
 
 	<!-- Divisor de conteudo -->
 	<div class="ui horizontal divider">
-		Quebra-Cabeça
+		<p style="color:white;">Quebra-Cabeça</p>
 	</div>
 
 	<section>
@@ -225,7 +225,7 @@ if (isset($_POST['logoutbtn'])) {
 	</section>
 	<!-- Divisor de conteudo -->
 	<div class="ui horizontal divider">
-		Corrida 
+		<p style="color:white;">Corrida</p>
 	</div>
 
 	<section>
@@ -290,7 +290,7 @@ if (isset($_POST['logoutbtn'])) {
 	<section>
 		<!-- Divisor de conteudo -->
 		<div class="ui horizontal divider">
-			Esportes
+			<p style="color:white;">Esportes</p>
 		</div>
 
 		<!-- FIFA 16 -->
@@ -354,7 +354,7 @@ if (isset($_POST['logoutbtn'])) {
 	<section>
 		<!-- Divisor de conteudo -->
 		<div class="ui horizontal divider">
-			Simulador
+			<p style="color:white;">Simulador</p>
 		</div>
 
 		<!-- FIFA 16 -->
