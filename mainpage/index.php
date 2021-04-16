@@ -24,12 +24,18 @@ if (isset($_POST['logoutbtn'])) {
 
 		<!-- Dados de login -->
 		<div class="login-data">
-			<label>
-				<?php echo "Usuário:" ."<i class='user icon'></i>"  . "<strong>" . $_SESSION['login_user'] . "</strong>" ?>
-			</label>
-			<div>
-				<a href="logout/logout.php">Logout</a>
-			</div>		
+			<div class="ui dropdown">
+				<div class="text">
+					<?php echo "<i style='color: blue;' class= 'user icon'></i>" . "<strong style='text-transform:uppercase'>" . $_SESSION['login_user'] . "</strong>" ?>
+				</div>
+				<i class="settings icon"></i>
+				<div class="menu">
+					<div class="item">
+						<a href="logout/logout.php">Logout</a>
+					</div>
+				</div>
+			</div>
+			
 		</div>
 	</header>
 	<!-- Divisor de conteudo -->
@@ -431,6 +437,8 @@ if (isset($_POST['logoutbtn'])) {
                   }, 500); //500 = 1 second
 			});
 		});
+
+		$('.ui.dropdown').dropdown();
 	</script>
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
