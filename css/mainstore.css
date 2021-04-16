@@ -1,45 +1,37 @@
 html{
 	scroll-behavior: smooth;
 }
-
 body{
-	background-color: #000000;
+	background-color: #0c0c0c;
 	margin: 0;
 	height: auto;
 }
-
 .sticky{
 	position: fixed;
 	top: 0;
 	width: 100%;
-	background-color: #dd0611;
+	/* background-image: linear-gradient(to right, #790202 , #000000); */
+	background-color: #b8040d;
 	z-index: 999;
 }
-
-
 .sticky h1{
 	text-align: center;
 	padding: 50px;
 	color: white;
 	font-size: 35px;
 }
-
 .hidden-content{
 	display: block;
 	margin: 300px;
 }
-
 section .ui.cards .card{
 	margin: 0 auto;
 }
-
 .ui.horizontal.divider{
 	font-size: 30px;
 	margin: 100px;
 	text-align: center;
-
 }
-
 .login-data{
 	float: right;
 	padding: 20px;
@@ -50,7 +42,6 @@ section .ui.cards .card{
 	margin-top: -100px;
 	border-radius: 4px;
 }
-
 /* BOTAO DE TOPO */
 .paraotopo{
 	border-radius: 50px 50px 50px;
