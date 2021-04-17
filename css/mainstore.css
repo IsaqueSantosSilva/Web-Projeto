@@ -59,15 +59,15 @@ section .ui.cards .card{
 
 @keyframes shine{
 	10%{
-		box-shadow: 0 0 10px 0 white;
+		box-shadow: 0px 0px 10px 0px white;
 	}
 
 	50%{
-		box-shadow: 0 0 13px 0 white;
+		box-shadow: 0px 0px 13px 0px white;
 	}
 
 	100%{
-		box-shadow: 0 0 0 17px 0 white;
+		box-shadow: 0px 0px 0 17px 0px white;
 	}
 
 
