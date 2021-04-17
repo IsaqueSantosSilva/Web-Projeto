@@ -44,17 +44,19 @@ section .ui.cards .card{
 /* BOTAO DE TOPO */
 .paraotopo{
 	border-radius: 50px 50px 50px;
-   position: fixed;
-   width: 50px;
-   height: 50px;
-   background: rgb(0, 0, 0);
-   bottom: 20px;
-   right: 50px;
-   text-shadow: 1px 2px black;
+	position: fixed;
+	width: 50px;
+ 	height: 50px;
+ 	background: rgb(0, 0, 0);
+ 	bottom: 20px;
+ 	right: 50px;
+ 	text-shadow: 1px 2px black;
 	text-decoration: none;
 	text-align: center;
 	line-height: 50px;
-   color: white;
+  	color: white;
+  	font-size: 20px;
+  	animation: shine 5s infinite;
 }
 
 @keyframes shine{
