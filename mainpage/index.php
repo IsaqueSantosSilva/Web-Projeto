@@ -426,6 +426,13 @@ if (isset($_POST['logoutbtn'])) {
 		<a class="paraotopo" href="#"> <i class="fas fa-arrow-up"></i> </a> <!-- POR ALGUM OUTRO MOTIVO O BOTÃO "PARA O TOPO" SÓ FUNCIONA SE EU USAR ISSO!-->
 	</section>
 
+	<!-- Codigo FOOTER -->
+	<div class="ui inverted vertical footer segment">
+		<div class="ui container">
+			All Copyrights Reserved <i class="copyright icon"></i>
+		</div>
+	</div>
+
 	
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript"> 
