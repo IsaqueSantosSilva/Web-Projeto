@@ -18,7 +18,7 @@ class UserLogin{
 		$user = $_SESSION['login_user'];
 		$password = $_SESSION['login_pwd'];
 
-		$con = new PDO("mysql:host=localhost;dbname=banco",'root','');
+		$con = new PDO("mysql:host=localhost;dbname=loja",'root','');
 		$query = "SELECT name,password FROM loja.register WHERE name = '$user' and password = '$password'";
 		$stmt = $con->prepare($query);
 		$stmt->execute();
