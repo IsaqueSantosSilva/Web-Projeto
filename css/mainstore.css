@@ -55,9 +55,6 @@ section .ui.cards .card{
 	text-align: center;
 	line-height: 50px;
    color: white;
-   font-size: 22px;  
-   z-index: 999; 
-   animation: shine 3s infinite;
 }
 
 @keyframes shine{
