@@ -13,6 +13,7 @@ if (isset($_POST['logoutbtn'])) {
 	<!-- CSS PARA O BOTAO SCROLL TO THE TOP -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"> 
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweet-modal@1.3.2/dist/min/jquery.sweet-modal.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/mainstore.css">
 </head>
 
@@ -44,6 +45,7 @@ if (isset($_POST['logoutbtn'])) {
 	<div class="ui horizontal divider">
 		<p style="color:white;">Aventura</p> 
 	</div>
+
 	<section>
 		<!-- HORIZON ZERO DAWN -->
 		<div class="ui cards">
@@ -52,15 +54,17 @@ if (isset($_POST['logoutbtn'])) {
 					<img src="covers/aventura/hzd.jpg">
 				</div>
 				<div class="content">
-					<div class="header">Horizon Zero Dawn</div>
+					<div class="header" id="hzd">Horizon Zero Dawn</div>
 					<div class="description">
 						Horizon Zero Dawn™ é um RPG de aventura e ação vencedor de vários prêmios – e esta Edição Completa inclui a expansão The Frozen Wilds, com novos territórios e novas habilidades, armas e Máquinas.
 					</div>
 				</div>
-				<div class="ui vertical animated green button" tabindex="0">
-					<div class="hidden content">R$ 40,99</div>
-					<div class="visible content">
+				<div class="ui vertical animated green button" onclick="callHorizon()" tabindex="0">
+					<div class="hidden content" onclick="callHorizon()">
 						<i class="shop icon"></i>
+					</div>
+					<div class="visible content">
+						R$ 40,99
 					</div>
 				</div>
 			</div>
@@ -76,9 +80,11 @@ if (isset($_POST['logoutbtn'])) {
 					</div>
 				</div>
 				<div class="ui vertical animated green button" tabindex="0">
-					<div class="hidden content">R$ 35,00</div>
-					<div class="visible content">
+					<div class="hidden content" onclick="callLife()">
 						<i class="shop icon"></i>
+					</div>
+					<div class="visible content">
+						R$ 35,00
 					</div>
 				</div>
 			</div>
@@ -94,9 +100,11 @@ if (isset($_POST['logoutbtn'])) {
 					</div>
 				</div>
 				<div class="ui vertical animated green button" tabindex="0">
-					<div class="hidden content">R$ 150,99</div>
-					<div class="visible content">
+					<div class="hidden content" onclick="callColossus()">
 						<i class="shop icon"></i>
+					</div>
+					<div class="visible content">
+						R$ 150,99
 					</div>
 				</div>
 			</div>
@@ -121,9 +129,11 @@ if (isset($_POST['logoutbtn'])) {
 					</div>
 				</div>
 				<div class="ui vertical animated green button" tabindex="0">
-					<div class="hidden content">R$ 90,00</div>
-					<div class="visible content">
+					<div class="hidden content" onclick="callWitch()">
 						<i class="shop icon"></i>
+					</div>
+					<div class="visible content">
+						R$ 90,00
 					</div>
 				</div>
 			</div>
@@ -139,9 +149,11 @@ if (isset($_POST['logoutbtn'])) {
 					</div>
 				</div>
 				<div class="ui vertical animated green button" tabindex="0">
-					<div class="hidden content">R$ 32,00</div>
-					<div class="visible content">
+					<div class="hidden content" onclick="callDeadSpace()">
 						<i class="shop icon"></i>
+					</div>
+					<div class="visible content">
+						R$ 32,00
 					</div>
 				</div>
 			</div>
@@ -157,9 +169,11 @@ if (isset($_POST['logoutbtn'])) {
 					</div>
 				</div>
 				<div class="ui vertical animated green button" tabindex="0">
-					<div class="hidden content">R$ 112,00</div>
-					<div class="visible content">
+					<div class="hidden content" onclick="callRE()">
 						<i class="shop icon"></i>
+					</div>
+					<div class="visible content">
+						R$ 112,00
 					</div>
 				</div>
 			</div>
@@ -185,9 +199,11 @@ if (isset($_POST['logoutbtn'])) {
 					</div>
 				</div>
 				<div class="ui vertical animated green button" tabindex="0">
-					<div class="hidden content">R$ 100,00</div>
-					<div class="visible content">
+					<div class="hidden content" onclick="callTetris()">
 						<i class="shop icon"></i>
+					</div>
+					<div class="visible content">
+						R$ 100,00
 					</div>
 				</div>
 			</div>
@@ -203,9 +219,11 @@ if (isset($_POST['logoutbtn'])) {
 					</div>
 				</div>
 				<div class="ui vertical animated green button" tabindex="0">
-					<div class="hidden content">R$ 60,00</div>
-					<div class="visible content">
+					<div class="hidden content" onclick="callTangram()">
 						<i class="shop icon"></i>
+					</div>
+					<div class="visible content">
+						R$ 60,00
 					</div>
 				</div>
 			</div>
@@ -221,9 +239,11 @@ if (isset($_POST['logoutbtn'])) {
 					</div>
 				</div>
 				<div class="ui vertical animated green button" tabindex="0">
-					<div class="hidden content">R$ 69,99</div>
-					<div class="visible content">
+					<div class="hidden content" onclick="callRoom()">
 						<i class="shop icon"></i>
+					</div>
+					<div class="visible content">
+						R$ 69,99
 					</div>
 				</div>
 			</div>
@@ -248,9 +268,11 @@ if (isset($_POST['logoutbtn'])) {
 					</div>
 				</div>
 				<div class="ui vertical animated green button" tabindex="0">
-					<div class="hidden content">R$ 180,00</div>
-					<div class="visible content">
+					<div class="hidden content" onclick="callNeedSpeed()">
 						<i class="shop icon"></i>
+					</div>
+					<div class="visible content">
+						R$ 180,00
 					</div>
 				</div>
 			</div>
@@ -266,9 +288,11 @@ if (isset($_POST['logoutbtn'])) {
 					</div>
 				</div>
 				<div class="ui vertical animated green button" tabindex="0">
-					<div class="hidden content">R$ 55,00</div>
-					<div class="visible content">
+					<div class="hidden content" onclick="callAsphalt()">
 						<i class="shop icon"></i>
+					</div>
+					<div class="visible content">
+						R$ 55,00
 					</div>
 				</div>
 			</div>
@@ -284,9 +308,11 @@ if (isset($_POST['logoutbtn'])) {
 					</div>
 				</div>
 				<div class="ui vertical animated green button" tabindex="0">
-					<div class="hidden content">R$ 55,89</div>
-					<div class="visible content">
+					<div class="hidden content" onclick="callCrew()">
 						<i class="shop icon"></i>
+					</div>
+					<div class="visible content">
+						R$ 55,89
 					</div>
 				</div>
 			</div>
@@ -312,9 +338,11 @@ if (isset($_POST['logoutbtn'])) {
 					</div>
 				</div>
 				<div class="ui vertical animated green button" tabindex="0">
-					<div class="hidden content">R$ 140,00</div>
-					<div class="visible content">
+					<div class="hidden content" onclick="callFifa()">
 						<i class="shop icon"></i>
+					</div>
+					<div class="visible content">
+						R$ 140,00
 					</div>
 				</div>
 			</div>
@@ -330,9 +358,11 @@ if (isset($_POST['logoutbtn'])) {
 					</div>
 				</div>
 				<div class="ui vertical animated green button" tabindex="0">
-					<div class="hidden content">R$ 200,00</div>
-					<div class="visible content">
+					<div class="hidden content">
 						<i class="shop icon"></i>
+					</div>
+					<div class="visible content">
+						R$ 200,00
 					</div>
 				</div>
 			</div>
@@ -348,9 +378,11 @@ if (isset($_POST['logoutbtn'])) {
 					</div>
 				</div>
 				<div class="ui vertical animated green button" tabindex="0">
-					<div class="hidden content">R$ 25,00</div>
-					<div class="visible content">
+					<div class="hidden content" onclick="callRocket()">
 						<i class="shop icon"></i>
+					</div>
+					<div class="visible content">
+						R$ 25,00
 					</div>
 				</div>
 			</div>
@@ -376,9 +408,11 @@ if (isset($_POST['logoutbtn'])) {
 					</div>
 				</div>
 				<div class="ui vertical animated green button" tabindex="0">
-					<div class="hidden content">R$ 135,00</div>
-					<div class="visible content">
+					<div class="hidden content" onclick="callFlight()">
 						<i class="shop icon"></i>
+					</div>
+					<div class="visible content">
+						R$ 135,00
 					</div>
 				</div>
 			</div>
@@ -395,9 +429,11 @@ if (isset($_POST['logoutbtn'])) {
 					</div>
 				</div>
 				<div class="ui vertical animated green button" tabindex="0">
-					<div class="hidden content">R$ 99,99</div>
-					<div class="visible content">
+					<div class="hidden content" onclick="callArma()">
 						<i class="shop icon"></i>
+					</div>
+					<div class="visible content">
+						R$ 99,99
 					</div>
 				</div>
 			</div>
@@ -413,9 +449,11 @@ if (isset($_POST['logoutbtn'])) {
 					</div>
 				</div>
 				<div class="ui vertical animated green button" tabindex="0">
-					<div class="hidden content">R$ 46,00</div>
-					<div class="visible content">
+					<div class="hidden content" onclick="callSkylines()">
 						<i class="shop icon"></i>
+					</div>
+					<div class="visible content">
+						R$ 46,00
 					</div>
 				</div>
 			</div>
@@ -444,12 +482,11 @@ if (isset($_POST['logoutbtn'])) {
                   }, 500); //500 = 1 second
 			});
 		});
-
-		$('.ui.dropdown').dropdown();
 	</script>
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweet-modal@1.3.2/dist/min/jquery.sweet-modal.min.js"></script>
 	<script type="text/javascript" src="../js/script.js"></script>
 </body>
 </html>
