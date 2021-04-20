@@ -14,7 +14,7 @@ if (isset($_POST['btn1'])) {
 </head>
 <body>
 	<header>
-		<h1>Take mah money</h1>
+		<h1>Gamin' Go</h1>
 	</header>
 	
 	<form class="ui form" method="POST" action=" <? $_SERVER['PHP_SELF'] ?>">

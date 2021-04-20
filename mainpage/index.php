@@ -21,7 +21,7 @@ if (isset($_POST['logoutbtn'])) {
 
 	
 	<header class="sticky">
-		<h1>Take mah money</h1>
+		<h1>Gamin' Go</h1>
 
 		<!-- Dados de login -->
 		<div class="login-data">
