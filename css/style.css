@@ -1,3 +1,8 @@
+@font-face{
+	font-family: Gameon; 
+	src: url('../font/gameon.ttf');
+}
+
 body{
 	margin: 0 auto;
 	height: auto;
@@ -41,3 +46,5 @@ form h2{
 	margin-left: -12px;
 
 }
+
+

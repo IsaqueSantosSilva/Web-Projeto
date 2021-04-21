@@ -21,7 +21,7 @@ if (isset($_POST['logoutbtn'])) {
 
 	
 	<header class="sticky">
-		<h1>Gamin' Go</h1>
+		<h1 id="title">Gamin' Go</h1>
 
 		<!-- Dados de login -->
 		<div class="login-data">
@@ -43,7 +43,7 @@ if (isset($_POST['logoutbtn'])) {
 	<div class="hidden-content"></div>
 	
 	<div class="ui horizontal divider">
-		<p style="color:white;">Aventura</p> 
+		<p style="color:white;" class="categorys">Aventura</p> 
 	</div>
 
 	<section>
@@ -112,7 +112,7 @@ if (isset($_POST['logoutbtn'])) {
 	</section>
 	<!-- Divisor de conteudo -->
 	<div class="ui horizontal divider">
-		<p style="color:white;">Terror</p>
+		<p style="color:white;" class="categorys">Terror</p>
 	</div>
 
 	<section>
@@ -182,7 +182,7 @@ if (isset($_POST['logoutbtn'])) {
 
 	<!-- Divisor de conteudo -->
 	<div class="ui horizontal divider">
-		<p style="color:white;">Quebra-Cabeça</p>
+		<p style="color:white;" class="categorys">Quebra-Cabeça</p>
 	</div>
 
 	<section>
@@ -251,7 +251,7 @@ if (isset($_POST['logoutbtn'])) {
 	</section>
 	<!-- Divisor de conteudo -->
 	<div class="ui horizontal divider">
-		<p style="color:white;">Corrida</p>
+		<p style="color:white;" class="categorys">Corrida</p>
 	</div>
 
 	<section>
@@ -322,7 +322,7 @@ if (isset($_POST['logoutbtn'])) {
 	<section>
 		<!-- Divisor de conteudo -->
 		<div class="ui horizontal divider">
-			<p style="color:white;">Esportes</p>
+			<p style="color:white;" class="categorys">Esportes</p>
 		</div>
 
 		<!-- FIFA 16 -->
@@ -392,7 +392,7 @@ if (isset($_POST['logoutbtn'])) {
 	<section>
 		<!-- Divisor de conteudo -->
 		<div class="ui horizontal divider">
-			<p style="color:white;">Simulador</p>
+			<p style="color:white;" class="categorys">Simulador</p>
 		</div>
 
 		<!-- FIFA 16 -->
