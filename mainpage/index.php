@@ -18,17 +18,23 @@ if (isset($_POST['logoutbtn'])) {
 </head>
 
 <body>
-
 	
 	<header class="sticky">
-		<h1 id="title">Gamin' Go</h1>
+	<div id="search" class="ui action input">
+  			<input type="text" placeholder="Procurar">
+  			<button class="ui button">Search</button>
+		</div>
+		<h1 id="title">Gamin' Go</h1> 
+		
 
 		<!-- Dados de login -->
 		<div class="login-data">
+			
 			<div class="ui dropdown">
 				<div class="text">
 					<?php echo "<i style='color: blue;' class= 'user icon'></i>" . "<strong style='text-transform:uppercase'>" . $_SESSION['login_user'] . "</strong>" ?>
 				</div>
+				
 				<i class="settings icon"></i>
 				<div class="menu">
 					<div class="item">
@@ -38,6 +44,7 @@ if (isset($_POST['logoutbtn'])) {
 			</div>
 			
 		</div>
+
 	</header>
 	<!-- Divisor de conteudo -->
 	<div class="hidden-content"></div>

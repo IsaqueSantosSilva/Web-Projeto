@@ -1,5 +1,5 @@
-// Codigo para DROPDOWN
-$('.ui.dropdown').dropdown();
+// // Codigo para DROPDOWN
+// $('.ui.dropdown').dropdown();
 
 function callHorizon(){
 	$.sweetModal.confirm('Deseja comprar Horizon Zero Dawn?', 'Confirme?', function() {

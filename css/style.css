@@ -3,14 +3,20 @@
 	src: url('../font/gameon.ttf');
 }
 
+#title{
+	font-family: Gameon; 
+	font-size: 70px;
+}
+
 body{
+	background-color: #000000;
 	margin: 0 auto;
 	height: auto;
 	width: 100%;
 }
 
 header{
-	background-color: #282A2D;
+	background-image: linear-gradient(to right, #790202 , #000000); 
 	margin-bottom: 50px;
 }
 
@@ -22,6 +28,8 @@ header h1{
 }
 
 form{
+	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
 	position: relative;
 	align-content: center;
 	width: 30%;

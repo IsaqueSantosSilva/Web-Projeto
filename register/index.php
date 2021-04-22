@@ -13,7 +13,7 @@ if (isset($_POST['btn'])) {
 </head>
 <body>
 	<header>
-		<h1>Gamin' Go</h1>
+		<h1 id="title">Gamin' Go</h1>
 	</header>
 	
 	<form class="ui form" method="POST" action=" <? $_SERVER['PHP_SELF'] ?>">

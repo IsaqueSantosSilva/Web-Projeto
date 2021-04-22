@@ -2,10 +2,6 @@
 	font-family: Gameon; 
 	src: url('../font/gameon.ttf');
 }
-#title{
-	font-family: Gameon; 
-	font-size: 70px;
-}
 
 .categorys{
 	font-family: Gameon; 
@@ -32,11 +28,21 @@ body{
 	height: 150px;
 	z-index: 999;
 }
+
+#search{
+	margin-left: 20px;
+	position: absolute;
+    margin-top: 110px;
+	z-index: 999;
+}
+
 .sticky h1{
+	font-family: Gameon; 
+	font-size: 70px;
 	text-align: center;
-	padding: 50px;
+	padding: 10px;
 	color: white;
-	font-size: 35px;
+	
 }
 .hidden-content{
 	display: block;
