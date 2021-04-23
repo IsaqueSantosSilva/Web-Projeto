@@ -22,7 +22,7 @@ if (isset($_POST['logoutbtn'])) {
 	<header class="sticky">
 	<div id="search" class="ui action input">
   			<input type="text" placeholder="Procurar">
-  			<button class="ui button">Search</button>
+  			<button class="ui button"><i class="search icon"></i></button>
 		</div>
 		<h1 id="title">Gamin' Go</h1> 
 		
