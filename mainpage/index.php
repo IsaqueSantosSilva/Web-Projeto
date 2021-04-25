@@ -20,29 +20,39 @@ if (isset($_POST['logoutbtn'])) {
 <body>
 	
 	<header class="sticky">
-	<div id="search" class="ui action input">
-  			<input type="text" placeholder="Procurar">
-  			<button class="ui button"><i class="search icon"></i></button>
-		</div>
 		<h1 id="title">Gamin' Go</h1> 
-		
+
+		<!-- Item de procura -->
+		<div class="ui search">
+			<div class="ui icon input">
+				<input class="prompt" type="text" onfocus="selectCategory()" placeholder="Procure jogos aqui">
+				<i class="search icon"></i>
+			</div>
+			<div class="results"></div>
+		</div>
 
 		<!-- Dados de login -->
 		<div class="login-data">
-			
-			<div class="ui dropdown">
-				<div class="text">
-					<?php echo "<i style='color: blue;' class= 'user icon'></i>" . "<strong style='text-transform:uppercase'>" . $_SESSION['login_user'] . "</strong>" ?>
+			<div class="ui accordion">
+				<div class="title" style="color: black;">
+					<img class="ui avatar image" src='profileimg/<?php echo $_SESSION['hally']?>' >
+					<strong style="text-transform: uppercase; "><?php echo $_SESSION['login_user']  ?></strong>
 				</div>
-				
-				<i class="settings icon"></i>
-				<div class="menu">
-					<div class="item">
-						<a href="logout/logout.php">Logout</a>
-					</div>
+				<div class="content">
+					<p class="transition hidden">
+						<a style="color: black;" href="#" onclick="showProfile()">
+							<i class="user icon"></i>
+							Perfil
+						</a>
+					</p>
+					<p class="transition hidden">
+						<a style="color: black;" href="logout/logout.php" >
+							<i class="paper plane icon"></i>
+							Logout
+						</a>
+					</p>
 				</div>
 			</div>
-			
 		</div>
 
 	</header>
@@ -466,6 +476,31 @@ if (isset($_POST['logoutbtn'])) {
 			</div>
 		</div>
 	</section>
+
+	<div class="ui modal">
+		<i class="close icon"></i>
+		<div class="header">
+			Meu Perfil
+		</div>
+		<div class="image content">
+			<div class="ui medium image">
+				<img src="profileimg/<?php echo $_SESSION['hally']?>">
+			</div>
+			<div class="description">
+				<div class="ui header">
+					<?php echo "<strong style='text-transform:uppercase'>" . $_SESSION['login_user'] . "</strong>" ?>
+				</div>
+				<p>Imagine que tem um texto foda aqui</p>
+			</div>
+		</div>
+		<div class="actions">
+			<div class="ui positive right labeled icon button">
+				Fechar
+				<i class="checkmark icon"></i>
+			</div>
+		</div>
+	</div>
+
 	<!-- BOTÃO DE TOPO -->
 	<section>
 		<a class="paraotopo" href="#"> <i class="fas fa-arrow-up"></i> </a> <!-- POR ALGUM OUTRO MOTIVO O BOTÃO "PARA O TOPO" SÓ FUNCIONA SE EU USAR ISSO!-->
