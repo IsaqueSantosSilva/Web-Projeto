@@ -14,6 +14,7 @@ html{
 	overflow-x: hidden;
 }
 body{
+	width: 102vw;
 	background-color: #0c0c0c;
 	margin: 0;
 	height: auto;
@@ -26,13 +27,6 @@ body{
 	width: 100%;
 	background-image: linear-gradient(to right, #790202 , #000000); 
 	height: 150px;
-	z-index: 999;
-}
-
-#search{
-	margin-left: 20px;
-	position: absolute;
-    margin-top: 110px;
 	z-index: 999;
 }
 
@@ -58,13 +52,22 @@ section .ui.cards .card{
 }
 .login-data{
 	float: right;
+	border-style: hidden;
 	padding: 20px;
-	background-color: white;
-	margin: 10px;
-	border-radius: 4px;
 	position: relative;
-	top: -140px;
+	top: -7em;
+	margin-right: 10px;
+	background-color: white;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	width: auto;
 }
+
+.ui.search{
+	position: relative;
+	top: -15px;
+}
+
 /* BOTAO DE TOPO */
 .paraotopo{
 	border-radius: 50px 50px 50px;
@@ -107,7 +110,6 @@ section .ui.cards .card{
 }
 
 /*ScrollBar Custom*/
-
 ::-webkit-scrollbar {
   width: 13px;
 
@@ -128,6 +130,7 @@ section .ui.cards .card{
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
+
 
 
 

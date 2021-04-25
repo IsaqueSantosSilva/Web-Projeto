@@ -16,8 +16,12 @@ if (isset($_POST['btn'])) {
 		<h1 id="title">Gamin' Go</h1>
 	</header>
 	
-	<form class="ui form" method="POST" action=" <? $_SERVER['PHP_SELF'] ?>">
+	<form class="ui form" method="POST"  action=" <? $_SERVER['PHP_SELF'] ?>" enctype="multipart/form-data">
+
 		<h2>Cadastro</h2>
+		<div class="field">
+			<input type="file" required name="archive">
+		</div>
 		<div class="field">
 			<label>Nome de Usuário</label>
 			<input type="text" name="username" placeholder="Utilize letras e numeros" required>
