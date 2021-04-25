@@ -1,7 +1,5 @@
 <?php 
-include 'UserRegister.php';
 session_start();
-
 
 class UserLogin{
 	public $pdo;
@@ -15,7 +13,6 @@ class UserLogin{
 	}
 		
 	public function validateOnlineLogin(){
-		$img = $_SESSION['ha']['name'];
 		$user = $_SESSION['login_user'];
 		$password = $_SESSION['login_pwd'];
 		
