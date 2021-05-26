@@ -15,6 +15,7 @@ if (isset($_POST['logoutbtn'])) {
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweet-modal@1.3.2/dist/min/jquery.sweet-modal.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/mainstore.css">
+	<link rel="icon" href="../icon/GGIcon.png" style="width: 100%; height: 100%">
 </head>
 
 <body>
