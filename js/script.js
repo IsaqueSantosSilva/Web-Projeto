@@ -150,6 +150,10 @@ function showProfile() {
 	$('.ui.modal').modal('show');
 }
 
+function showCreators(){
+	$('.ui.modal').modal('show');
+}
+
 
 function selectCategory(){
 $('.ui.search').search({
