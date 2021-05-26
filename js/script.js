@@ -1,5 +1,3 @@
-// // Codigo para DROPDOWN
-// $('.ui.dropdown').dropdown();
 
 function callHorizon(){
 	$.sweetModal.confirm('Deseja comprar Horizon Zero Dawn?', 'Confirme?', function() {
@@ -147,9 +145,11 @@ function callSkylines(){
 
 $('.ui.accordion').accordion();
 
+
 function showProfile() {
 	$('.ui.modal').modal('show');
 }
+
 
 function selectCategory(){
 $('.ui.search').search({

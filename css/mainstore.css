@@ -63,6 +63,13 @@ section .ui.cards .card{
 	width: auto;
 }
 
+#creators-modal{
+	display: none;
+	height: 100%;
+	width: 100%;
+	background-color: white;
+}
+
 .ui.search{
 	position: relative;
 	top: -15px;
@@ -73,18 +80,18 @@ section .ui.cards .card{
 	border-radius: 50px 50px 50px;
 	position: fixed;
 	width: 50px;
- 	height: 50px;
- 	background: rgb(0, 0, 0);
- 	bottom: 20px;
- 	right: 50px;
- 	text-shadow: 1px 2px black;
+	height: 50px;
+	background: rgb(0, 0, 0);
+	bottom: 20px;
+	right: 50px;
+	text-shadow: 1px 2px black;
 	text-decoration: none;
 	text-align: center;
 	line-height: 50px;
-  	color: white;
-  	font-size: 20px;
-  	animation: shine 5s infinite;
-  	z-index: 999;
+	color: white;
+	font-size: 20px;
+	animation: shine 5s infinite;
+	z-index: 999;
 }
 
 .ui.inverted.vertical.footer.segment{
@@ -109,26 +116,26 @@ section .ui.cards .card{
 	
 }
 
-/*ScrollBar Custom*/
+
 ::-webkit-scrollbar {
-  width: 13px;
+	width: 13px;
 
 }
 
-/* Track */
+
 ::-webkit-scrollbar-track {
-  background: #000; 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #790202; 
-  border-radius: 10px;
+	background: #000; 
 }
 
-/* Handle on hover */
+
+::-webkit-scrollbar-thumb {
+	background: #790202; 
+	border-radius: 10px;
+}
+
+
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+	background: #555; 
 }
 
 

@@ -4,14 +4,16 @@ session_start();
 class UserLogin{
 	public $pdo;
 	public $login_user;
-	private $login_pwd;
+	public $login_pwd;
 
 	function __construct(){
 		$this->pdo = new PDO("mysql:host=localhost;dbname=loja",'root','');
 		$this->login_user = $_SESSION['login_user'] = $_POST['login_user'];
 		$this->login_pwd = $_SESSION['login_pwd'] = $_POST['login_pwd'];
 	}
-		
+
+		// <-------Validar Login------->
+	
 	public function validateOnlineLogin(){
 		$user = $_SESSION['login_user'];
 		$password = $_SESSION['login_pwd'];
@@ -26,20 +28,20 @@ class UserLogin{
 			header("Location: ../mainpage/index.php");
 		}else{
 			echo '<div class="ui basic modal" style=" display:none">
-					<div class="ui icon header">
-					<i class="x red icon"></i>
-					Dados incorretos
-				  </div>
-				<div class="content">
-					<p>Dados de login não se conferem... Verifique seus dados ou crie uma nova conta</p>
-				</div>
-				<div class="actions">
-					<div class="ui green ok inverted button">
-					<i class="checkmark icon"></i>
-						Ok
-					</div>
-				</div>
-				</div>';
+			<div class="ui icon header">
+			<i class="x red icon"></i>
+			Dados incorretos
+			</div>
+			<div class="content">
+			<p>Dados de login não se conferem... Verifique seus dados ou crie uma nova conta</p>
+			</div>
+			<div class="actions">
+			<div class="ui green ok inverted button">
+			<i class="checkmark icon"></i>
+			Ok
+			</div>
+			</div>
+			</div>';
 		}
 	}
 }
