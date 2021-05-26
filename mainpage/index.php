@@ -40,13 +40,19 @@ if (isset($_POST['logoutbtn'])) {
 				</div>
 				<div class="content">
 					<p class="transition hidden">
-						<a style="color: black;" href="#" onclick="showProfile()">
+						<a style="color: blue;" href="#" onclick="showProfile()">
 							<i class="user icon"></i>
 							Perfil
 						</a>
 					</p>
 					<p class="transition hidden">
-						<a style="color: black;" href="logout/logout.php" >
+						<a style="color: black;" href="#" onclick="showCreators()">
+							<i class="briefcase icon"></i>
+							Criadores
+						</a>
+					</p>
+					<p class="transition hidden">
+						<a style="color: red;" href="logout/logout.php" >
 							<i class="paper plane icon"></i>
 							Logout
 						</a>
@@ -501,6 +507,8 @@ if (isset($_POST['logoutbtn'])) {
 		</div>
 	</div>
 
+	<!-- Creators Modal -->
+
 	<!-- BOTÃO DE TOPO -->
 	<section>
 		<a class="paraotopo" href="#"> <i class="fas fa-arrow-up"></i> </a> <!-- POR ALGUM OUTRO MOTIVO O BOTÃO "PARA O TOPO" SÓ FUNCIONA SE EU USAR ISSO!-->
@@ -529,6 +537,7 @@ if (isset($_POST['logoutbtn'])) {
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweet-modal@1.3.2/dist/min/jquery.sweet-modal.min.js"></script>
+
 	<script type="text/javascript" src="../js/script.js"></script>
 </body>
 </html>
