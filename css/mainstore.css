@@ -63,13 +63,6 @@ section .ui.cards .card{
 	width: auto;
 }
 
-#creators-modal{
-	display: none;
-	height: 100%;
-	width: 100%;
-	background-color: white;
-}
-
 .ui.search{
 	position: relative;
 	top: -15px;

@@ -24,11 +24,11 @@ if (isset($_POST['btn'])) {
 		</div>
 		<div class="field">
 			<label>Nome de Usuário</label>
-			<input type="text" name="username" placeholder="Utilize letras e numeros" required>
+			<input type="text" name="username" autocomplete="off" placeholder="Utilize letras e numeros" required>
 		</div>
 		<div class="field">
 			<label>Idade</label>
-			<input id="age" type="text" name="age" placeholder="Minimo 14 anos" required maxlength="2">
+			<input id="age" type="text" name="age" autocomplete="off" placeholder="Minimo 14 anos" required maxlength="2">
 		</div>
 		<div class="field">
 			<label>Email</label>
@@ -36,11 +36,11 @@ if (isset($_POST['btn'])) {
 		</div>
 		<div class="field">
 			<label>Senha</label>
-			<input type="password" maxlength="8" placeholder="Min 6 e Max 8 caracteres" name="pwd" required>
+			<input type="password" maxlength="8" autocomplete="off" placeholder="Min 6 e Max 8 caracteres" name="pwd" required>
 		</div>
 		<div class="field">
 			<label>Confirmar Senha</label>
-			<input type="password" placeholder="Confirme sua senha" maxlength="8" name="cpwd" required>
+			<input type="password" autocomplete="off" placeholder="Confirme sua senha" maxlength="8" name="cpwd" required>
 		</div>
 		<a href="../login/index.php">Já possui uma conta?</a>
 

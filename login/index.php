@@ -21,11 +21,11 @@ if (isset($_POST['btn1'])) {
 		<h2>Login</h2>
 		<div class="field">
 			<label>Nome de Usuário</label>
-			<input type="text" name="login_user" placeholder="Digite seu usuário" required placeholder="">
+			<input type="text" name="login_user" autocomplete="off" placeholder="Digite seu usuário" required placeholder="">
 		</div>
 		<div class="field">
 			<label>Senha</label>
-			<input type="password" name="login_pwd" placeholder="Sua senha" required placeholder="">
+			<input type="password" name="login_pwd" autocomplete="off" placeholder="Sua senha" required placeholder="">
 		</div>
 		<a href="../register/index.php" style="text-decoration: none;">Não possui cadastro?</a>
 		<div class="position-button">
