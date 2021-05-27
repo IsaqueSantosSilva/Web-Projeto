@@ -14,6 +14,7 @@ if (isset($_POST['logoutbtn'])) {
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"> 
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweet-modal@1.3.2/dist/min/jquery.sweet-modal.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/mainstore.css">
 	<link rel="icon" href="../icon/GGIcon.png" style="width: 100%; height: 100%">
 </head>
@@ -47,7 +48,7 @@ if (isset($_POST['logoutbtn'])) {
 						</a>
 					</p>
 					<p class="transition hidden">
-						<a style="color: black;" href="#" onclick="showCreators()">
+						<a style="color: black;" id="info" href="#animatedModal">
 							<i class="briefcase icon"></i>
 							Criadores
 						</a>
@@ -509,26 +510,40 @@ if (isset($_POST['logoutbtn'])) {
 	</div>
 
 	<!-- Creators Modal -->
-	
-	<div class="ui basic modal">
-		<div class="ui icon header">
-			<i class="archive icon"></i>
-			Archive Old Messages
-		</div>
-		<div class="content">
-			<p>Your inbox is getting full, would you like us to enable automatic archiving of old messages?</p>
-		</div>
-		<div class="actions">
-			<div class="ui red basic cancel inverted button">
-				<i class="remove icon"></i>
-				No
+	<div class="creators" style="display:none">
+		<div class="creators-content">
+			<h3 style="text-align: center;">Criadores</h3>
+			<div class="ui card">
+				<div class="content">
+					<div class="center aligned header">hls</div>
+					<div class="center aligned description">
+						<p>Estudante de programação</p>
+					</div>
+				</div>
+				<div class="extra content">
+					<div class="center aligned author">
+						<img class="ui avatar image" src="https://semantic-ui.com/images/avatar/small/jenny.jpg"> Jenny
+					</div>
+				</div>
 			</div>
-			<div class="ui green ok inverted button">
-				<i class="checkmark icon"></i>
-				Yes
+			<div class="ui divider"></div>
+			<div class="ui card">
+				<div class="content">
+					<!--------- Troque seu perfil aqui --------->
+					<div class="center aligned header">ISAQUE</div> 
+					<div class="center aligned description">
+						<p>Jenny is a student studying Media Management at the New School</p>
+					</div>
+				</div>
+				<div class="extra content">
+					<div class="center aligned author">
+						<img class="ui avatar image" src="https://semantic-ui.com/images/avatar/small/jenny.jpg"> Jenny
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
+	
 
 	<!-- BOTÃO DE TOPO -->
 	<section>
@@ -542,8 +557,77 @@ if (isset($_POST['logoutbtn'])) {
 		</div>
 	</div>
 
+
+
+	<div id="animatedModal">
+		<div class="close-animatedModal" > 
+			<span>X</span>
+		</div>
+
+		<div class="modal-content">
+			<div id="left-content">
+				<div class="ui card">
+					<div class="content">
+						<div class="center aligned header">HLS</div>
+						<div class="center aligned description">
+							<div>
+								<img class="ui medium circular image" src="covers/facecartoon.png">
+							</div>
+							<p> 
+								Pequena descrição HLS
+							</p>
+						</div>
+					</div>
+					<div class="extra content">
+						<div class="center aligned author" style="color:#0c0c0c" id="hls">
+							<a href="https://github.com/HallyssonDev" target="_blank">
+								<i class="github square icon" style="font-size: 40px;"></i> 
+							</a>
+
+							<a href="https://github.com/HallyssonDev" target="_blank">
+								<i class="address book outline icon" style="font-size: 40px;"></i> 
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ui vertical divider" style="color: red;">
+				<i class="briefcase icon" style="color: red"></i>
+			</div>
+			<div id="right-content">
+				<div class="ui card">
+					<div class="content">
+						<div class="center aligned header">Isaque</div>
+						<div class="center aligned description">
+							<div>
+								<img class="ui medium circular image" src="">
+							</div>
+							<p>
+								Descrição aqui
+							</p>
+						</div>
+					</div>
+					<div class="extra content">
+						<div class="center aligned author" style="color:#0c0c0c" id="zeka">
+									<!-- Github aqui -->
+							<a href="" target="_blank">
+								<i class="github square icon" style="font-size: 40px;"></i> 
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+	<!-- jquery -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/animatedmodal@1.0.0/animatedModal.min.js"></script>
+
+	<!-- framework semantic -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 	<script type="text/javascript"> 
 
 		$(function(){
@@ -555,8 +639,11 @@ if (isset($_POST['logoutbtn'])) {
 		});
 	</script>
 
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+	<!-- creators modal -->
+	<script type="text/javascript">
+		$("#info").animatedModal();
+	</script>
+
 	<script src="https://cdn.jsdelivr.net/npm/sweet-modal@1.3.2/dist/min/jquery.sweet-modal.min.js"></script>
 
 	<script type="text/javascript" src="../js/script.js"></script>

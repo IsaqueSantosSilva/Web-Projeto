@@ -150,35 +150,32 @@ function showProfile() {
 	$('.ui.modal').modal('show');
 }
 
-function showCreators(){
-	$('.ui.modal').modal('show');
-}
-
+// Mostrar modal que apresenta os criadores
 
 function selectCategory(){
-$('.ui.search').search({
-    source: content
- });
- }
+	$('.ui.search').search({
+		source: content
+	});
+}
 
- var content = [
-  { title: 'Horizon Zero Dawn' },
-  { title: 'Life is Strange' },
-  { title: 'Shadow of the Colossus' },
-  { title: 'Blair Witch' },
-  { title: 'Dead Space' },
-  { title: 'Resident Evil 7' },
-  { title: 'Tetris Ultimate' },
-  { title: 'Tangram' },
-  { title: 'The Room' },
-  { title: 'Need for Speed' },
-  { title: 'Asphalt 8: Airborne' },
-  { title: 'The Crew 2' },
-  { title: 'Fifa 16' },
-  { title: 'PES2019' },
-  { title: 'Rocket League' },
-  { title: 'Microsoft Flight Simulator' },
-  { title: 'Arma 3' },
-  { title: 'Cities: Skylines' },
+var content = [
+{ title: 'Horizon Zero Dawn' },
+{ title: 'Life is Strange' },
+{ title: 'Shadow of the Colossus' },
+{ title: 'Blair Witch' },
+{ title: 'Dead Space' },
+{ title: 'Resident Evil 7' },
+{ title: 'Tetris Ultimate' },
+{ title: 'Tangram' },
+{ title: 'The Room' },
+{ title: 'Need for Speed' },
+{ title: 'Asphalt 8: Airborne' },
+{ title: 'The Crew 2' },
+{ title: 'Fifa 16' },
+{ title: 'PES2019' },
+{ title: 'Rocket League' },
+{ title: 'Microsoft Flight Simulator' },
+{ title: 'Arma 3' },
+{ title: 'Cities: Skylines' },
   // etc
-];
+  ];
