@@ -35,9 +35,61 @@ body{
 	font-size: 70px;
 	text-align: center;
 	padding: 10px;
-	color: white;
-	
+	color: white;	
 }
+
+.creators{
+	margin: 0 auto;
+	background-color: white;
+	height: 50%;
+	width: 50%;
+	padding: 20px;
+}
+
+.close-animatedModal span{
+	position: relative;
+	top: 20px;
+	left: 10px;
+	margin: 0 auto;
+	font-size: 45px;
+	color: darkred;
+}
+
+.close-animatedModal span:hover{
+	cursor: pointer;
+}
+
+.creators .creators-content .ui.card{
+	margin: 0 auto;
+}
+
+/*Conteudo modal esquerdo*/
+
+#left-content{
+	margin: 0 auto;
+	position: relative;
+	top: 150px;
+	left: 15%;
+	float: left;
+}
+
+/*Conteudo modal direito*/
+#right-content{
+	margin: 0 auto;
+	position: relative;
+	top: 150px;
+	right: 15%;
+	float: right;
+}
+
+#hls:hover{
+	cursor: pointer;
+}
+
+#zeka:hover{
+	cursor: pointer;
+}
+
 .hidden-content{
 	display: block;
 	margin: 300px;
