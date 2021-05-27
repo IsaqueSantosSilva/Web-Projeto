@@ -5,12 +5,14 @@ if (isset($_POST['btn1'])) {
 	(new UserLogin())->validateOnlineLogin();
 }
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Login</title>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="icon" href="../icon/GGIcon.png" style="width: 100%; height: 100%">
 </head>
 <body>
 	<header>
