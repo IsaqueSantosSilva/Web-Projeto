@@ -1,6 +1,8 @@
 @font-face{
 	font-family: Gameon; 
 	src: url('../font/gameon.ttf');
+	font-family: 'neon';
+	src: url('neon.otf');
 }
 
 
@@ -180,6 +182,84 @@ section .ui.cards .card{
 
 ::-webkit-scrollbar-thumb:hover {
 	background: #555; 
+}
+
+.neon{
+	font-family: 'neon';
+	position: absolute;
+	top:250px;
+	left: 25%;
+	transform: translate(-50%, -50%);
+	margin: 0;
+	padding: 0 20px;
+	font-size: 10em;
+	color: #fff;
+	text-shadow:0 0 20px #00FF7F;
+	animation: desappear 1s infinite;
+	animation: floating 5s infinite;
+}
+
+.neon:after{
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0 20px;
+	z-index: -1;
+	color: #00FF7F; 
+	animation: lbrink 4s infinite;
+}
+
+
+@keyframes desappear{
+	0%{
+		opacity: 1;
+	}
+	50%{
+		opacity: 0.9;
+	}
+	100%{
+		opacity: 1;
+	}
+
+}
+
+
+
+@keyframes lbrink{
+	0%{
+		opacity: 1;
+	}
+
+	40%{
+		opacity: 0;
+	}
+
+	70%{
+		opacity: 1;
+	}
+
+	80%{
+		opacity: 0.4;
+	}
+
+	100%{
+		opacity: 1;
+	}
+}
+
+@keyframes floating{
+	0%{
+		transform: translateY(0px);
+	}
+	50%{
+		transform: translateY(-20px);
+	}
+	100%{
+		transform: translateY(0px);
+	}
+}
+
 }
 
 
