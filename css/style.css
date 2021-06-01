@@ -17,7 +17,7 @@ body{
 
 header{
 	background-image: linear-gradient(to right, #790202 , #000000); 
-	margin-bottom: 50px;
+	height: 200px;
 }
 
 header h1{
@@ -55,4 +55,74 @@ form h2{
 
 }
 
+.neon{
+	font-family: 'neon';
+	transform: translate(-50%, -50%);
+	font-size: 8vh;
+	color: #fff;
+	text-shadow:0 0 20px #00FF7F;
+	animation: desappear 1s infinite;
+	animation: floating 5s infinite;
+	position: relative;
+	left: 19vh;
+}
+
+.neon:after{
+	content: attr(data-text);
+	z-index: -1;
+	color: #00FF7F; 
+	animation: lbrink 4s infinite;
+	position: relative;
+	right: 38vh;
+}
+
+
+@keyframes desappear{
+	0%{
+		opacity: 1;
+	}
+	50%{
+		opacity: 0.9;
+	}
+	100%{
+		opacity: 1;
+	}
+
+}
+
+
+
+@keyframes lbrink{
+	0%{
+		opacity: 1;
+	}
+
+	40%{
+		opacity: 0;
+	}
+
+	70%{
+		opacity: 1;
+	}
+
+	80%{
+		opacity: 0.4;
+	}
+
+	100%{
+		opacity: 1;
+	}
+}
+
+@keyframes floating{
+	0%{
+		transform: translateY(0px);
+	}
+	50%{
+		transform: translateY(-20px);
+	}
+	100%{
+		transform: translateY(0px);
+	}
+}
 

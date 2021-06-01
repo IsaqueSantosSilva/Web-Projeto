@@ -186,28 +186,24 @@ section .ui.cards .card{
 
 .neon{
 	font-family: 'neon';
-	position: absolute;
-	top:250px;
-	left: 25%;
 	transform: translate(-50%, -50%);
-	margin: 0;
-	padding: 0 20px;
-	font-size: 10em;
+	font-size: 8vh;
 	color: #fff;
 	text-shadow:0 0 20px #00FF7F;
 	animation: desappear 1s infinite;
 	animation: floating 5s infinite;
+	position: relative;
+	left: 19vh;
+	top: 20px;
 }
 
 .neon:after{
 	content: attr(data-text);
-	position: absolute;
-	top: 0;
-	left: 0;
-	padding: 0 20px;
 	z-index: -1;
 	color: #00FF7F; 
 	animation: lbrink 4s infinite;
+	position: relative;
+	right: 35.5vh;
 }
 
 
@@ -260,7 +256,7 @@ section .ui.cards .card{
 	}
 }
 
-}
+
 
 
 
