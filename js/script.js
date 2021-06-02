@@ -147,7 +147,11 @@ $('.ui.accordion').accordion();
 
 
 function showProfile() {
-	$('.ui.modal').modal('show');
+	$('#profile').modal('show');
+}
+
+function addFunds() {
+	$('#deposit').modal('show');
 }
 
 // Mostrar modal que apresenta os criadores

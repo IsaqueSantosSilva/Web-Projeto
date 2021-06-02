@@ -33,7 +33,7 @@ if (isset($_POST['btn'])) {
 		</div>
 		<div class="field">
 			<label>Email</label>
-			<input type="text" name="email" placeholder="Email Válido" required>
+			<input type="text" name="email" autocomplete="off" placeholder="Email Válido" required>
 		</div>
 		<div class="field">
 			<label>Senha</label>
