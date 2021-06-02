@@ -1,8 +1,14 @@
-<?php 
+<?php
 session_start();
+
+require '../Classes/UserMoney.php';
 
 if (isset($_POST['logoutbtn'])) {
 	header("Location: ../register/index.php");
+}
+
+if (isset($_POST['funds'])) {
+	(new UserMoney())->verifyMoney();
 }
 ?>
 <!DOCTYPE html>
@@ -11,7 +17,7 @@ if (isset($_POST['logoutbtn'])) {
 	<title>Loja Principal</title>
 	<meta charset="utf-8">
 	<!-- CSS PARA O BOTAO SCROLL TO THE TOP -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"> 
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweet-modal@1.3.2/dist/min/jquery.sweet-modal.min.css">
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
@@ -20,11 +26,15 @@ if (isset($_POST['logoutbtn'])) {
 </head>
 
 <body>
-	
+
 	<header class="sticky">
+<<<<<<< HEAD
+		<h1 id="title">Gamin' Go</h1>
+=======
 	<div >
 		<h1 class="neon" data-text="Gamin' Go">Gamin' Go</h1>
 	</div>
+>>>>>>> 49d6cf05a1e973627f593140f5afdbcf5298a1c1
 
 		<!-- Item de procura -->
 		<div class="ui search">
@@ -56,9 +66,22 @@ if (isset($_POST['logoutbtn'])) {
 						</a>
 					</p>
 					<p class="transition hidden">
+						<a style="color:green" href="#" onclick="addFunds()">
+							<i class="money icon"></i>
+							Depositar
+						</a>
+					</p>
+					<p class="transition hidden">
 						<a style="color: red;" href="logout/logout.php" >
 							<i class="paper plane icon"></i>
 							Logout
+						</a>
+					</p>
+					<!-- It doesn't work yet -->
+					<p class="transition hidden">
+						<a style="color: darkred" href="#">
+							<i class="close icon"></i>
+							Apagar Conta
 						</a>
 					</p>
 				</div>
@@ -68,9 +91,9 @@ if (isset($_POST['logoutbtn'])) {
 	</header>
 	<!-- Divisor de conteudo -->
 	<div class="hidden-content"></div>
-	
+
 	<div class="ui horizontal divider">
-		<p style="color:white;" class="categorys">Aventura</p> 
+		<p style="color:white;" class="categorys">Aventura</p>
 	</div>
 
 	<section>
@@ -472,7 +495,7 @@ if (isset($_POST['logoutbtn'])) {
 				<div class="content">
 					<div class="header">Cities: Skylines</div>
 					<div class="description">
-						Cities: Skylines é uma versão moderna dos simuladores de cidade clássicos. O jogo introduz novos elementos de jogabilidade para que você sinta a emoção e a dificuldade de criar e manter uma cidade de verdade, além de aprimorar os elementos clássicos da construção de cidades. 
+						Cities: Skylines é uma versão moderna dos simuladores de cidade clássicos. O jogo introduz novos elementos de jogabilidade para que você sinta a emoção e a dificuldade de criar e manter uma cidade de verdade, além de aprimorar os elementos clássicos da construção de cidades.
 					</div>
 				</div>
 				<div class="ui vertical animated green button" tabindex="0">
@@ -487,10 +510,13 @@ if (isset($_POST['logoutbtn'])) {
 		</div>
 	</section>
 
-	<div class="ui modal">
+	<div class="ui modal" id="profile" style="overflow-y: hidden;">
 		<i class="close icon"></i>
 		<div class="header">
-			Meu Perfil
+			Meu Perfil 
+			<div id="wallet">
+				R$<input disabled value="<?php echo $_SESSION['mahmoney'] ?>" style="border-style:hidden; background-color: #fff;">
+			</div>
 		</div>
 		<div class="image content">
 			<div class="ui medium image">
@@ -500,7 +526,10 @@ if (isset($_POST['logoutbtn'])) {
 				<div class="ui header">
 					<?php echo "<strong style='text-transform:uppercase'>" . $_SESSION['login_user'] . "</strong>" ?>
 				</div>
-				<p>Imagine que tem um texto foda aqui</p>
+				<p>
+					Não conhecemos <?php echo "<b>" . $_SESSION['login_user'] . "</b>" ?> muito bem. Mas temos certeza
+					de que é uma boa pessoa.
+				</p>
 			</div>
 		</div>
 		<div class="actions">
@@ -532,7 +561,7 @@ if (isset($_POST['logoutbtn'])) {
 			<div class="ui card">
 				<div class="content">
 					<!--------- Troque seu perfil aqui --------->
-					<div class="center aligned header">ISAQUE</div> 
+					<div class="center aligned header">ISAQUE</div>
 					<div class="center aligned description">
 						<p>Jenny is a student studying Media Management at the New School</p>
 					</div>
@@ -545,7 +574,7 @@ if (isset($_POST['logoutbtn'])) {
 			</div>
 		</div>
 	</div>
-	
+
 
 	<!-- BOTÃO DE TOPO -->
 	<section>
@@ -562,7 +591,7 @@ if (isset($_POST['logoutbtn'])) {
 
 
 	<div id="animatedModal">
-		<div class="close-animatedModal" > 
+		<div class="close-animatedModal" >
 			<span>X</span>
 		</div>
 
@@ -575,7 +604,7 @@ if (isset($_POST['logoutbtn'])) {
 							<div>
 								<img class="ui medium circular image" src="covers/facecartoon.png">
 							</div>
-							<p> 
+							<p>
 								Pequena descrição HLS
 							</p>
 						</div>
@@ -583,11 +612,11 @@ if (isset($_POST['logoutbtn'])) {
 					<div class="extra content">
 						<div class="center aligned author" style="color:#0c0c0c" id="hls">
 							<a href="https://github.com/HallyssonDev" target="_blank">
-								<i class="github square icon" style="font-size: 40px;"></i> 
+								<i class="github square icon" style="font-size: 40px;"></i>
 							</a>
 
 							<a href="https://github.com/HallyssonDev" target="_blank">
-								<i class="address book outline icon" style="font-size: 40px;"></i> 
+								<i class="address book outline icon" style="font-size: 40px;"></i>
 							</a>
 						</div>
 					</div>
@@ -611,9 +640,9 @@ if (isset($_POST['logoutbtn'])) {
 					</div>
 					<div class="extra content">
 						<div class="center aligned author" style="color:#0c0c0c" id="zeka">
-									<!-- Github aqui -->
+							<!-- Github aqui -->
 							<a href="" target="_blank">
-								<i class="github square icon" style="font-size: 40px;"></i> 
+								<i class="github square icon" style="font-size: 40px;"></i>
 							</a>
 						</div>
 					</div>
@@ -621,6 +650,25 @@ if (isset($_POST['logoutbtn'])) {
 			</div>
 		</div>
 	</div>
+
+	<!-- Add funds modal -->
+
+	<div class="ui basic modal" id="deposit" style="overflow-x: hidden;">
+		<div class="ui icon header">
+			<form class="" action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
+				<div class="ui input focus">
+					<input type="text" id="money" name="usermoney" autocomplete="off" placeholder="1,000,000">
+				</div>
+				<div style="margin-top: 20px;">
+					<button type="submit" class="ui green button" name='funds'>
+						Depositar
+					</button>
+				</div>
+			</form>
+		</div>
+		<!-- div com class content -->
+	</div>
+
 	
 
 	<!-- jquery -->
@@ -628,15 +676,29 @@ if (isset($_POST['logoutbtn'])) {
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/animatedmodal@1.0.0/animatedModal.min.js"></script>
 
+	<!-- mask plugin -->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-mask-plugin@1.14.16/dist/jquery.mask.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.#money').mask('000.000.00', {reverse: true});
+		});
+	</script>
+
+	<script type="text/javascript">
+		if ( window.history.replaceState ) {
+ 		 window.history.replaceState( null, null, window.location.href );
+		}
+	</script>
 	<!-- framework semantic -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
-	<script type="text/javascript"> 
+	<script type="text/javascript">
 
 		$(function(){
 			$(".menu a").on('click',function(){
 				$("html, body").animate({
 					scrollTop:$($.attr(this,'href')).offset().top
-                  }, 500); //500 = 1 second
+			}, 500); //500 = 1 second
 			});
 		});
 	</script>
@@ -645,6 +707,13 @@ if (isset($_POST['logoutbtn'])) {
 	<script type="text/javascript">
 		$("#info").animatedModal();
 	</script>
+
+	<!-- money money insert success -->
+
+	<script type="text/javascript">
+		$('.mini.modal').modal('show');
+	</script>
+
 
 	<script src="https://cdn.jsdelivr.net/npm/sweet-modal@1.3.2/dist/min/jquery.sweet-modal.min.js"></script>
 
