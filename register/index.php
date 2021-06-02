@@ -14,7 +14,9 @@ if (isset($_POST['btn'])) {
 </head>
 <body>
 	<header>
-		<h1 id="title">Gamin' Go</h1>
+	<div >
+		<h1 class="neon" data-text="Gamin' Go">Gamin' Go</h1>
+	</div>
 	</header>
 	
 	<form class="ui form" method="POST"  action=" <? $_SERVER['PHP_SELF'] ?>" enctype="multipart/form-data">
