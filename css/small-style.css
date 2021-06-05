@@ -1,0 +1,28 @@
+header{
+	background-image: linear-gradient(to right, #790202 , #000000); 
+	height: 15vh;
+}
+
+form{
+	width: 80%;
+	left: 0;
+	border-width: 1px;
+	margin: auto;
+	top: 50px;
+}
+
+form h3{margin: 30px}
+
+.position-button{
+	position: relative;
+	left: calc(100% - 65%);
+	margin: 20px auto;
+	margin-left: 0;
+}
+
+.neon{
+	font-size: 6vh;
+	left: 0;
+}
+
+.neon:after{display: none;}

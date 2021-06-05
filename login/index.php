@@ -1,4 +1,4 @@
-<?php 
+<?php
 require'../Classes/UserLogin.php';
 
 if (isset($_POST['btn1'])) {
@@ -12,17 +12,18 @@ if (isset($_POST['btn1'])) {
 	<title>Login</title>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" media="screen and (max-width: 900px)" href="../css/small-style.css">
 	<link rel="icon" href="../icon/GGIcon.png" style="width: 100%; height: 100%">
 </head>
 <body>
 	<header>
-	<div >
+	<div>
 		<h1 class="neon" data-text="Gamin' Go">Gamin' Go</h1>
 	</div>
 	</header>
 	
 	<form class="ui form" method="POST" action=" <? $_SERVER['PHP_SELF'] ?>">
-		<h2>Login</h2>
+		<h3>LOGIN</h3>
 		<div class="field">
 			<label>Nome de Usuário</label>
 			<input type="text" name="login_user" autocomplete="off" placeholder="Digite seu usuário" required placeholder="">
