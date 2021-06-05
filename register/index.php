@@ -12,6 +12,7 @@ if (isset($_POST['btn'])) {
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="stylesheet" media="screen and (max-width: 900px)" href="../css/small-style.css">
 	<link rel="icon" href="../icon/GGIcon.png" style="width: 100%; height: 100%">
+	<link rel="icon" href="../icon/GGIcon.png" style="width: 100%; height: 100%">
 </head>
 <body>
 	<header>
@@ -22,7 +23,7 @@ if (isset($_POST['btn'])) {
 	
 	<form class="ui form" method="POST"  action=" <? $_SERVER['PHP_SELF'] ?>" enctype="multipart/form-data">
 
-		<h2>Cadastro</h2>
+		<h3>Cadastro</h3>
 		<div class="field">
 			<input type="file" required name="archive">
 		</div>
