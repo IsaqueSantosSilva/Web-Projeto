@@ -26,11 +26,11 @@ if (isset($_POST['funds'])) {
 </head>
 
 <body>
-
-	<header class="sticky">
-
-		<h1 id="title">Gamin' Go</h1>
-
+	
+	<div>
+		<h1 class="neon" data-text="Gamin' Go">Gamin' Go</h1>
+	</div>
+>>>>>>> f19274888698f501ac8569435983b601b245f838
 
 		<!-- Item de procura -->
 		<div class="ui search">
@@ -715,7 +715,6 @@ if (isset($_POST['funds'])) {
 	<script type="text/javascript">
 		$('.mini.modal').modal('show');
 	</script>
-
 
 	<script src="https://cdn.jsdelivr.net/npm/sweet-modal@1.3.2/dist/min/jquery.sweet-modal.min.js"></script>
 

@@ -3,11 +3,6 @@
 	src: url('../font/gameon.ttf');
 }
 
-#title{
-	font-family: Gameon; 
-	font-size: 70px;
-}
-
 body{
 	background-color: #000000;
 	margin: 0 auto;
@@ -41,10 +36,11 @@ form{
 	margin-top: 20px;
 }
 
-form h2{
+form h3{
 	text-transform: uppercase;
 	margin: 40px;
 	text-align: center;
+	font-size: 25px;
 }
 
 .position-button{
@@ -76,7 +72,6 @@ form h2{
 	right: 38vh;
 }
 
-
 @keyframes desappear{
 	0%{
 		opacity: 1;
@@ -89,8 +84,6 @@ form h2{
 	}
 
 }
-
-
 
 @keyframes lbrink{
 	0%{
