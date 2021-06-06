@@ -26,11 +26,12 @@ if (isset($_POST['funds'])) {
 </head>
 
 <body>
-	
+
+	<header class="sticky">
+
 	<div>
 		<h1 class="neon" data-text="Gamin' Go">Gamin' Go</h1>
 	</div>
->>>>>>> f19274888698f501ac8569435983b601b245f838
 
 		<!-- Item de procura -->
 		<div class="ui search">
