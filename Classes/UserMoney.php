@@ -17,11 +17,11 @@ class UserMoney
     $stmt = $this->pdo->prepare($query);
     $stmt->execute();
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
-    if ($row['wallet'] > 0 ) {
+    if ($row['wallet'] >= 0 ) {
       $soma = $row['wallet'] + $this->usermoney;
       $this->updateMoney($soma);
-
     }
+    
   }
 
 
@@ -30,8 +30,16 @@ class UserMoney
     $sqlq = "UPDATE loja.register SET wallet = $valor WHERE name = '$nmn' ";
     $srs = $this->pdo->prepare($sqlq);
     $srs->execute();
-    
-    $_SESSION['mahmoney'] = $valor;
+
+    $this->showMoney();
+  }
+
+  public function showMoney(){
+    $quer = "SELECT * FROM loja.register";
+    $q = $this->pdo->prepare($quer);
+    $q->execute();
+    $col = $q->fetch(PDO::FETCH_ASSOC);
+    $_SESSION['money'] = $col['wallet'];
   }
 
 
