@@ -7,7 +7,7 @@ class UserLogin{
 	public $login_pwd;
 
 	function __construct(){
-		$this->pdo = new PDO("mysql:host=localhost;dbname=loja",'root','');
+		$this->pdo = new PDO("mysql:host=localhost;dbname=loja",'root','123');
 		$this->login_user = $_SESSION['login_user'] = $_POST['login_user'];
 		$this->login_pwd = $_SESSION['login_pwd'] = $_POST['login_pwd'];
 	}
