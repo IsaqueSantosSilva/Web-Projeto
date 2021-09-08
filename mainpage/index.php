@@ -84,13 +84,22 @@ if (isset($_POST['funds'])) {
 				</div>
 			</div>
 		</div>
+		    <!-- Auto Scroll to Sections -->
+		<div>
+			<div class="ui button" onclick="scrollToSection('adventure')"> Aventura </div>
+			<div class="ui button" onclick="scrollToSection('horror')"> Terror </div>
+			<div class="ui button" onclick="scrollToSection('puzzle')"> Quebra-Cabeça </div>
+			<div class="ui button" onclick="scrollToSection('racing')"> Corrida </div>
+			<div class="ui button" onclick="scrollToSection('sports')"> Esportes </div>
+			<div class="ui button" onclick="scrollToSection('simulator')"> Simulador </div>
+		</div>
 
 	</header>
 	<!-- Divisor de conteudo -->
 	<div class="hidden-content"></div>
 
 	<div class="ui horizontal divider">
-		<p style="color:white;" class="categorys">Aventura</p>
+		<p style="color:white;" id="adventure" class="categorys">Aventura</p>
 	</div>
 
 	<section>
@@ -159,7 +168,7 @@ if (isset($_POST['funds'])) {
 	</section>
 	<!-- Divisor de conteudo -->
 	<div class="ui horizontal divider">
-		<p style="color:white;" class="categorys">Terror</p>
+		<p style="color:white;" id="horror" class="categorys">Terror</p>
 	</div>
 
 	<section>
@@ -229,7 +238,7 @@ if (isset($_POST['funds'])) {
 
 	<!-- Divisor de conteudo -->
 	<div class="ui horizontal divider">
-		<p style="color:white;" class="categorys">Quebra-Cabeça</p>
+		<p style="color:white;" id="puzzle"  class="categorys">Quebra-Cabeça</p>
 	</div>
 
 	<section>
@@ -298,7 +307,7 @@ if (isset($_POST['funds'])) {
 	</section>
 	<!-- Divisor de conteudo -->
 	<div class="ui horizontal divider">
-		<p style="color:white;" class="categorys">Corrida</p>
+		<p style="color:white;" id="racing"  class="categorys">Corrida</p>
 	</div>
 
 	<section>
@@ -369,7 +378,7 @@ if (isset($_POST['funds'])) {
 	<section>
 		<!-- Divisor de conteudo -->
 		<div class="ui horizontal divider">
-			<p style="color:white;" class="categorys">Esportes</p>
+			<p style="color:white;" id="sports"  class="categorys">Esportes</p>
 		</div>
 
 		<!-- FIFA 16 -->
@@ -439,7 +448,7 @@ if (isset($_POST['funds'])) {
 	<section>
 		<!-- Divisor de conteudo -->
 		<div class="ui horizontal divider">
-			<p style="color:white;" class="categorys">Simulador</p>
+			<p style="color:white;" id="simulator"  class="categorys">Simulador</p>
 		</div>
 
 		<!-- FIFA 16 -->

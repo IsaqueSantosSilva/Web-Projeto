@@ -183,3 +183,9 @@ var content = [
 { title: 'Cities: Skylines' },
   // etc
   ];
+
+  //Auto Scroll Section
+  function scrollToSection(id) {
+	var section = document.getElementById(id)
+	section.scrollIntoView();
+}
