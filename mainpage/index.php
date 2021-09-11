@@ -2,6 +2,7 @@
 session_start();
 
 require '../Classes/UserMoney.php';
+require '../Classes/UserBio.php';
 
 if (isset($_POST['logoutbtn'])) {
 	header("Location: ../register/index.php");
@@ -9,6 +10,10 @@ if (isset($_POST['logoutbtn'])) {
 
 if (isset($_POST['funds'])) {
 	(new UserMoney())->verifyMoney();
+}
+
+if (isset($_POST['addBio'])) {
+	(new UserBio())->addBio();
 }
 ?>
 <!DOCTYPE html>
@@ -538,10 +543,16 @@ if (isset($_POST['funds'])) {
 				<div class="ui header">
 					<?php echo "<strong style='text-transform:uppercase'>" . $_SESSION['login_user'] . "</strong>" ?>
 				</div>
-				<p>
-					Não conhecemos <?php echo "<b>" . $_SESSION['login_user'] . "</b>" ?> muito bem. Mas temos certeza
-					de que é uma boa pessoa.
-				</p>
+				<form method="POST" action="<?php $_SERVER['PHP_SELF'] ?>">
+					<textarea name="user_bio" placeholder="Digite uma pequena descrição">
+					</textarea>
+					<button type="submit" name="addBio">Adicionar</button>
+					<div>
+						Sobre:
+						<br>
+						<?php echo $_SESSION['user_bio'] ?>
+					</div>
+				</form>
 			</div>
 		</div>
 		<div class="actions">
