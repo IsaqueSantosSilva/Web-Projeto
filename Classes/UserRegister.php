@@ -11,7 +11,7 @@ class UserRegister{
 	public $cpwd;
 
 	function __construct(){
-		$this->pdo = new PDO("mysql:host=localhost;dbname=loja",'root','123');
+		$this->pdo = new PDO("mysql:host=localhost;dbname=loja",'root','');
 		$this->img = $_SESSION['ha'] = $_FILES['archive'];
 		$this->name = $_SESSION['user'] = $_POST['username'];
 		$this->age = $_SESSION['age'] = $_POST['age'];

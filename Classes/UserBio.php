@@ -8,7 +8,7 @@ class UserBio
 	function __construct()
 	{
 		$this->pdo = new PDO("mysql:host=localhost;dbname=loja",'root','');
-		$this->bio = $_SESSION['user_bio'] =  $_POST['user_bio'];
+		$this->bio = $_SESSION['user_bio'] = $_POST['user_bio'];
 	}
 
 
