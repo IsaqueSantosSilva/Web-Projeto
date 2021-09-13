@@ -513,11 +513,7 @@ if (isset($_POST['funds'])) {
 			Meu Perfil 
 			<div id="wallet">
 				<?php 
-					if (isset($_SESSION['money'])) {
-						echo "R$" . $_SESSION['money'];
-					}else{
-						echo "R$ 0,00";
-					}
+					echo "R$" . $_SESSION['money'];
 				 ?>
 			</div>
 		</div>

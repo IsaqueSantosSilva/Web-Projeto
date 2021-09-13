@@ -1,5 +1,6 @@
 <?php
 
+
 class UserMoney
 {
   private $usermoney;
@@ -13,7 +14,8 @@ class UserMoney
 
   
   public function verifyMoney(){
-    $query = "SELECT wallet FROM loja.register";
+    $nmn = $_SESSION['login_user'];
+    $query = "SELECT wallet FROM loja.register WHERE name = '$nmn'";
     $stmt = $this->pdo->prepare($query);
     $stmt->execute();
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -21,8 +23,8 @@ class UserMoney
       $soma = $row['wallet'] + $this->usermoney;
       $this->updateMoney($soma);
     }
-    
   }
+
 
 
   public function updateMoney($valor){
@@ -35,11 +37,12 @@ class UserMoney
   }
 
   public function showMoney(){
-    $quer = "SELECT * FROM loja.register";
+    $nmn = $_SESSION['login_user'];
+    $quer = "SELECT wallet FROM loja.register WHERE name = '$nmn' ";
     $q = $this->pdo->prepare($quer);
     $q->execute();
-    $col = $q->fetch(PDO::FETCH_ASSOC);
-    $_SESSION['money'] = $col['wallet'];
+    $row = $q->fetch(PDO::FETCH_ASSOC);
+    $_SESSION['money'] = $row['wallet'];
   }
 
 
