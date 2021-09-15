@@ -34,35 +34,39 @@ if (isset($_POST['addBio'])) {
 
 	<header class="sticky">
 
-	<div>
-		<h1 class="neon" data-text="Gamin' Go">Gamin' Go</h1>
-	</div>
+		<div>
+			<h1 class="neon" data-text="Gamin' Go">Gamin' Go</h1>
+		</div>
 
 		<!-- Item de procura -->
-		<div class="ui search">
+		<!-- <div class="ui search">
 			<div class="ui icon input">
 				<input class="prompt" type="text" onfocus="selectCategory()" placeholder="Procure jogos aqui">
 				<i class="search icon"></i>
 			</div>
 			<div class="results"></div>
-		</div>
+		</div> -->
 
 		<!-- Dados de login -->
+
+		<!-- classe login data -->
 		<div class="login-data">
 			<div class="ui accordion">
-				<div class="title" style="color: black;">
+				<div class="title active">
 					<img class="ui avatar image" src='profileimg/<?php echo $_SESSION['hally']?>' >
-					<strong style="text-transform: uppercase; "><?php echo $_SESSION['login_user']  ?></strong>
+					<strong style="text-transform: uppercase;">
+						<?php echo $_SESSION['login_user']; ?>
+					</strong>
 				</div>
 				<div class="content">
 					<p class="transition hidden">
-						<a style="color: blue;" href="#" onclick="showProfile()">
+						<a style="color: blue" href="#" onclick="showProfile()">
 							<i class="user icon"></i>
 							Perfil
 						</a>
 					</p>
 					<p class="transition hidden">
-						<a style="color: black;" id="info" href="#animatedModal">
+						<a style="color: black;" id="info" href="../creators/creators.html">
 							<i class="briefcase icon"></i>
 							Criadores
 						</a>
@@ -89,15 +93,44 @@ if (isset($_POST['addBio'])) {
 				</div>
 			</div>
 		</div>
-		    <!-- Auto Scroll to Sections -->
-		<div>
-			<div class="ui button" onclick="scrollToSection('adventure')"> Aventura </div>
-			<div class="ui button" onclick="scrollToSection('horror')"> Terror </div>
-			<div class="ui button" onclick="scrollToSection('puzzle')"> Quebra-Cabeça </div>
-			<div class="ui button" onclick="scrollToSection('racing')"> Corrida </div>
-			<div class="ui button" onclick="scrollToSection('sports')"> Esportes </div>
-			<div class="ui button" onclick="scrollToSection('simulator')"> Simulador </div>
+
+		<!-- Auto Scroll to Sections -->
+
+		<div class="sideMenuCategory">
+			<h3>Menu</h3>
+			<div class="open-close-element" onclick="openSideMenu();">
+				<i class="angle right icon" style="font-size: 50px;"></i>
+			</div>
+			<div class="ui one column grid">
+				<div class="row">
+
+					<div class="column" style="cursor: pointer;"  onclick="scrollToSection('adventure')">
+						<span>Aventura</span>
+					</div>
+
+					<div class="column" style="cursor: pointer;" onclick="scrollToSection('horror')">
+						<span>Terror</span>
+					</div>
+
+					<div class="column" style="cursor: pointer;" onclick="scrollToSection('puzzle')">
+						<span>Puzzle</span>
+					</div>
+
+					<div class="column" style="cursor: pointer;" onclick="scrollToSection('racing')">
+						<span>Corrida</span>
+					</div>
+
+					<div class="column" style="cursor: pointer;" onclick="scrollToSection('sports')">
+						<span>Esportes</span>
+					</div>
+
+					<div class="column" style="cursor:pointer" onclick="scrollToSection('simulator')">
+						<span>Simulador</span>
+					</div>
+				</div>
+			</div>
 		</div>
+
 
 	</header>
 	<!-- Divisor de conteudo -->
@@ -527,8 +560,8 @@ if (isset($_POST['addBio'])) {
 			Meu Perfil 
 			<div id="wallet">
 				<?php 
-					echo "R$" . $_SESSION['money'];
-				 ?>
+				echo "R$" . $_SESSION['money'];
+				?>
 			</div>
 		</div>
 		<div class="image content">
@@ -608,68 +641,6 @@ if (isset($_POST['addBio'])) {
 	</div>
 
 
-
-	<div id="animatedModal">
-		<div class="close-animatedModal" >
-			<span>X</span>
-		</div>
-
-		<div class="modal-content">
-			<div id="left-content">
-				<div class="ui card">
-					<div class="content">
-						<div class="center aligned header">HLS</div>
-						<div class="center aligned description">
-							<div>
-								<img class="ui medium circular image" src="covers/facecartoon.png">
-							</div>
-							<p>
-								Pequena descrição HLS
-							</p>
-						</div>
-					</div>
-					<div class="extra content">
-						<div class="center aligned author" style="color:#0c0c0c" id="hls">
-							<a href="https://github.com/HallyssonDev" target="_blank">
-								<i class="github square icon" style="font-size: 40px;"></i>
-							</a>
-
-							<a href="https://github.com/HallyssonDev" target="_blank">
-								<i class="address book outline icon" style="font-size: 40px;"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="ui vertical divider" style="color: red;">
-				<i class="briefcase icon" style="color: red"></i>
-			</div>
-			<div id="right-content">
-				<div class="ui card">
-					<div class="content">
-						<div class="center aligned header">Isaque</div>
-						<div class="center aligned description">
-							<div>
-								<img class="ui medium circular image" src="">
-							</div>
-							<p>
-								Descrição aqui
-							</p>
-						</div>
-					</div>
-					<div class="extra content">
-						<div class="center aligned author" style="color:#0c0c0c" id="zeka">
-							<!-- Github aqui -->
-							<a href="" target="_blank">
-								<i class="github square icon" style="font-size: 40px;"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
 	<!-- Add funds modal -->
 
 	<div class="ui basic modal" id="deposit" style="overflow-x: hidden;">
@@ -688,12 +659,10 @@ if (isset($_POST['addBio'])) {
 		<!-- div com class content -->
 	</div>
 
-	
 
 	<!-- jquery -->
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/animatedmodal@1.0.0/animatedModal.min.js"></script>
 
 	<!-- mask plugin -->
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-mask-plugin@1.14.16/dist/jquery.mask.min.js"></script>
@@ -706,7 +675,7 @@ if (isset($_POST['addBio'])) {
 
 	<script type="text/javascript">
 		if ( window.history.replaceState ) {
- 		 window.history.replaceState( null, null, window.location.href );
+			window.history.replaceState( null, null, window.location.href );
 		}
 	</script>
 	<!-- framework semantic -->
@@ -722,16 +691,12 @@ if (isset($_POST['addBio'])) {
 		});
 	</script>
 
-	<!-- creators modal -->
-	<script type="text/javascript">
-		$("#info").animatedModal();
-	</script>
-
 	<!-- money money insert success -->
 
 	<script type="text/javascript">
 		$('.mini.modal').modal('show');
 	</script>
+
 
 	<script src="https://cdn.jsdelivr.net/npm/sweet-modal@1.3.2/dist/min/jquery.sweet-modal.min.js"></script>
 

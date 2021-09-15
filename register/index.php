@@ -50,7 +50,7 @@ if (isset($_POST['btn'])) {
 		<a href="../login/index.php">Já possui uma conta?</a>
 
 		<div class="position-button">
-			<button class="ui black button" name="btn" type="submit">
+			<button class="ui green button" name="btn" type="submit">
 				<i class="paper plane outline icon"></i>
 				Cadastrar
 			</button>
