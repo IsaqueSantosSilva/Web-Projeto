@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+require '../Classes/UserDelete.php';
 require '../Classes/UserMoney.php';
 require '../Classes/UserBio.php';
 
@@ -15,6 +15,10 @@ if (isset($_POST['funds'])) {
 if (isset($_POST['addBio'])) {
 	(new UserBio())->addBio();
 }
+
+if (isset($_POST['btnClose'])) {
+	(new UserDelete())->deleteCurrentUser();
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -25,7 +29,9 @@ if (isset($_POST['addBio'])) {
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweet-modal@1.3.2/dist/min/jquery.sweet-modal.min.css">
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+	<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
 	<link rel="stylesheet" type="text/css" href="../css/mainstore.css">
 	<link rel="icon" href="../icon/GGIcon.png" style="width: 100%; height: 100%">
 </head>
@@ -85,7 +91,7 @@ if (isset($_POST['addBio'])) {
 					</p>
 					<!-- It doesn't work yet -->
 					<p class="transition hidden">
-						<a style="color: darkred" href="#">
+						<a style="color: darkred" href="#modaldelete" rel="modal:open">
 							<i class="close icon"></i>
 							Apagar Conta
 						</a>
@@ -95,6 +101,15 @@ if (isset($_POST['addBio'])) {
 		</div>
 
 		<!-- Auto Scroll to Sections -->
+
+		<div id="modaldelete" class="modal">
+			<form method="POST" action="<?php $_SERVER['PHP_SELF'] ?>">
+				<p>Você tem certeza? Esta ação não pode ser revertida</p>
+				<button href="#" class="ui red button" style="transform: translate(100%);" name="btnClose" rel="modal:close">
+					<i class="close icon"></i>Apagar conta
+				</button>
+			</form>
+		</div>
 
 		<div class="sideMenuCategory">
 			<h3>Menu</h3>
@@ -696,10 +711,8 @@ if (isset($_POST['addBio'])) {
 	<script type="text/javascript">
 		$('.mini.modal').modal('show');
 	</script>
-
-
 	<script src="https://cdn.jsdelivr.net/npm/sweet-modal@1.3.2/dist/min/jquery.sweet-modal.min.js"></script>
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 	<script type="text/javascript" src="../js/script.js"></script>
 </body>
 </html>
