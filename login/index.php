@@ -26,15 +26,15 @@ if (isset($_POST['btn1'])) {
 		<h3>LOGIN</h3>
 		<div class="field">
 			<label>Nome de Usuário</label>
-			<input type="text" name="login_user" autocomplete="off" placeholder="Digite seu usuário" required placeholder="">
+			<input type="text" name="login_user" autocomplete="off" placeholder="Digite seu usuário" required>
 		</div>
 		<div class="field">
 			<label>Senha</label>
-			<input type="password" name="login_pwd" autocomplete="off" placeholder="Sua senha" required placeholder="">
+			<input type="password" name="login_pwd" autocomplete="off" placeholder="Sua senha" required >
 		</div>
 		<a href="../register/index.php" style="text-decoration: none;">Não possui cadastro?</a>
 		<div class="position-button">
-			<button class="ui black button" name="btn1" type="submit">
+			<button class="ui green button" name="btn1" type="submit">
 				<i class="paper plane outline icon"></i>
 				Login
 			</button>

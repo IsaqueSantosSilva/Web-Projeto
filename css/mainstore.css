@@ -1,36 +1,42 @@
-@font-face{
-	font-family: Gameon;
-	src: url('../font/gameon.ttf');
-}
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap');
 
 html{
 	scroll-behavior: smooth;
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
+
 body{
 	width: 102vw;
 	background-color: #0c0c0c;
 	margin: 0;
 	height: auto;
+	overflow-y: hidden;
 	
 }
+
 .sticky{
 	position: fixed;
 	top: 0;
 	width: 100%;
-	background-image: linear-gradient(to right, #790202 , #000000);
-	height: 150px;
+	background-color: #0c0c0c;
+	height: 110px;
 	z-index: 999;
+	border-style: solid;
+	border-top-style: hidden;
+	border-bottom-style: solid 1px;
+	border-bottom-color: greenyellow;
 }
 
 .sticky h1{
-	font-family: Gameon;
+	font-family: 'Urbanist', sans-serif;
 	font-size: 70px;
-	text-align: center;
+	text-align: left;
 	padding: 10px;
-	color: white;
+	color: greenyellow;
+	text-shadow: -5px 1px 6px greenyellow;
 }
+
 
 .creators{
 	margin: 0 auto;
@@ -104,21 +110,82 @@ section .ui.cards .card{
 	text-align: center;
 }
 .login-data{
+	display: flex;
+	text-align: center;
+	justify-content: center;
 	float: right;
 	border-style: hidden;
-	padding: 20px;
+	padding: 15px;
 	position: relative;
-	top: -7em;
+	top: -5.1em;
 	margin-right: 10px;
 	background-color: white;
-	border-bottom-right-radius: 10px;
-	border-bottom-left-radius: 10px;
-	width: auto;
+	border-bottom-style: solid;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	width: 150px;
+	background-color: lightgreen;
 }
 
 .ui.search{
 	position: relative;
 	top: -15px;
+}
+
+/*mainpage category card*/
+
+.sideMenuCategory{
+	position: fixed;
+	top: 40%;
+	transform: translate(-102%);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	background-color: black;
+	padding: 50px;
+	width: 12%;
+	font-size: 20px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	color: white;
+	border: 1px solid greenyellow;
+	transition: transform 1.2s;
+}
+
+.sideMenuCategory:hover{
+	transform: translate(-10%);
+}
+
+.sideMenuCategory .column{
+	padding-top: 10px;
+}
+
+.sideMenuCategory .column span:hover{
+	color: greenyellow;
+}
+
+.open-close-element{
+	position: absolute;
+	top: -2px;
+	right: -53px;
+	color: greenyellow;
+	cursor: pointer;
+}
+
+.open-close-element i{
+	border: 1px;
+	border-color: greenyellow;
+	border-style: solid;
+	background-color: white;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	padding: 15px;
+	background-color: #0c0c0c;
+}
+
+
+.categoryCard div{
+	padding: 10px;
 }
 
 /* BOTAO DE TOPO */
@@ -127,15 +194,15 @@ section .ui.cards .card{
 	position: fixed;
 	width: 50px;
 	height: 50px;
-	background: rgb(0, 0, 0);
+	background-color: darkgreen;
 	bottom: 20px;
 	right: 50px;
 	text-shadow: 1px 2px black;
 	text-decoration: none;
 	text-align: center;
 	line-height: 50px;
-	color: white;
 	font-size: 20px;
+	color: whitesmoke;
 	animation: shine 5s infinite;
 	z-index: 999;
 }
@@ -145,27 +212,14 @@ section .ui.cards .card{
 	z-index: 600;
 	margin-top: 100px;
 	text-align: center;
-	background-image: linear-gradient(to right, #790202 , #000000);
+	background-color: darkgreen;
 }
 
-@keyframes shine{
-	10%{
-		box-shadow: 0px 0px 10px 0px white;
-	}
 
-	50%{
-		box-shadow: 0px 0px 13px 0px white;
-	}
-
-	100%{
-		box-shadow: 0px 0px 0 17px 0px white;
-	}
-
-}
 
 
 ::-webkit-scrollbar {
-	width: 13px;
+	width: 10px;
 
 }
 
@@ -176,7 +230,7 @@ section .ui.cards .card{
 
 
 ::-webkit-scrollbar-thumb {
-	background: #790202;
+	background: greenyellow;
 	border-radius: 10px;
 }
 
@@ -185,74 +239,4 @@ section .ui.cards .card{
 	background: #555;
 }
 
-.neon{
-	font-family: 'neon';
-	transform: translate(-50%, -50%);
-	font-size: 8vh;
-	color: #fff;
-	text-shadow:0 0 20px #00FF7F;
-	animation: desappear 1s infinite;
-	animation: floating 5s infinite;
-	position: relative;
-	left: 19vh;
-	top: 20px;
-}
 
-.neon:after{
-	content: attr(data-text);
-	z-index: -1;
-	color: #00FF7F; 
-	animation: lbrink 4s infinite;
-	position: relative;
-	right: 35.5vh;
-}
-
-
-@keyframes desappear{
-	0%{
-		opacity: 1;
-	}
-	50%{
-		opacity: 0.9;
-	}
-	100%{
-		opacity: 1;
-	}
-
-}
-
-
-
-@keyframes lbrink{
-	0%{
-		opacity: 1;
-	}
-
-	40%{
-		opacity: 0;
-	}
-
-	70%{
-		opacity: 1;
-	}
-
-	80%{
-		opacity: 0.4;
-	}
-
-	100%{
-		opacity: 1;
-	}
-}
-
-@keyframes floating{
-	0%{
-		transform: translateY(0px);
-	}
-	50%{
-		transform: translateY(-20px);
-	}
-	100%{
-		transform: translateY(0px);
-	}
-}
