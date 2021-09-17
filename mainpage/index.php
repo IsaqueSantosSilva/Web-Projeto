@@ -41,7 +41,7 @@ if (isset($_POST['btnClose'])) {
 	<header class="sticky">
 
 		<div>
-			<h1 class="neon" data-text="Gamin' Go">Gamin' Go</h1>
+			<h1 data-text="Gamin' Go">Gamin' Go</h1>
 		</div>
 
 		<!-- Item de procura -->
@@ -66,19 +66,19 @@ if (isset($_POST['btnClose'])) {
 				</div>
 				<div class="content">
 					<p class="transition hidden">
-						<a style="color: blue" href="#" onclick="showProfile()">
+						<a style="color: blue" href="#profileUser" rel="modal:open">
 							<i class="user icon"></i>
 							Perfil
 						</a>
 					</p>
 					<p class="transition hidden">
-						<a style="color: black;" id="info" href="../creators/creators.html">
+						<a style="color: black;" href="#creators" rel="modal:open">
 							<i class="briefcase icon"></i>
 							Criadores
 						</a>
 					</p>
 					<p class="transition hidden">
-						<a style="color:green" href="#" onclick="addFunds()">
+						<a style="color:green" href="#deposit" rel="modal:open" >
 							<i class="money icon"></i>
 							Depositar
 						</a>
@@ -569,78 +569,8 @@ if (isset($_POST['btnClose'])) {
 		</div>
 	</section>
 
-	<div class="ui modal" id="profile" style="overflow-y: hidden;">
-		<i class="close icon"></i>
-		<div class="header">
-			Meu Perfil 
-			<div id="wallet">
-				<?php 
-				echo "R$" . $_SESSION['money'];
-				?>
-			</div>
-		</div>
-		<div class="image content">
-			<div class="ui medium image">
-				<img src="profileimg/<?php echo $_SESSION['hally']?>">
-			</div>
-			<div class="description">
-				<div class="ui header">
-					<?php echo "<strong style='text-transform:uppercase'>" . $_SESSION['login_user'] . "</strong>" ?>
-				</div>
-				<form method="POST" action="<?php $_SERVER['PHP_SELF'] ?>">
-					<textarea name="user_bio" placeholder="Digite uma pequena descrição">
-					</textarea>
-					<button type="submit" name="addBio">Adicionar</button>
-					<div>
-						Sobre:
-						<br>
-						<?php echo $_SESSION['user_bio'] ?>
-					</div>
-				</form>
-			</div>
-		</div>
-		<div class="actions">
-			<div class="ui positive right labeled icon button">
-				Fechar
-				<i class="checkmark icon"></i>
-			</div>
-		</div>
-	</div>
-
-	<!-- Creators Modal -->
-	<div class="creators" style="display:none">
-		<div class="creators-content">
-			<h3 style="text-align: center;">Criadores</h3>
-			<div class="ui card">
-				<div class="content">
-					<div class="center aligned header">hls</div>
-					<div class="center aligned description">
-						<p>Estudante de programação</p>
-					</div>
-				</div>
-				<div class="extra content">
-					<div class="center aligned author">
-						<img class="ui avatar image" src="https://semantic-ui.com/images/avatar/small/jenny.jpg"> Jenny
-					</div>
-				</div>
-			</div>
-			<div class="ui divider"></div>
-			<div class="ui card">
-				<div class="content">
-					<!--------- Troque seu perfil aqui --------->
-					<div class="center aligned header">ISAQUE</div>
-					<div class="center aligned description">
-						<p>Jenny is a student studying Media Management at the New School</p>
-					</div>
-				</div>
-				<div class="extra content">
-					<div class="center aligned author">
-						<img class="ui avatar image" src="https://semantic-ui.com/images/avatar/small/jenny.jpg"> Jenny
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	
+	
 
 
 	<!-- BOTÃO DE TOPO -->
@@ -657,62 +587,123 @@ if (isset($_POST['btnClose'])) {
 
 
 	<!-- Add funds modal -->
-
-	<div class="ui basic modal" id="deposit" style="overflow-x: hidden;">
-		<div class="ui icon header">
-			<form class="" action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
-				<div class="ui input focus">
-					<input type="text" id="money" name="usermoney" autocomplete="off" placeholder="1,000,000">
+	<div id="deposit" class="modal">
+		<form class="ui form" action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
+			<div class="ui input focus">
+				<input type="text" id="money" name="usermoney" placeholder="0.000.000">
+			</div>
+			<div style="margin-top: 20px;">
+				<button type="submit" class="ui green button" name="funds">
+					Depositar
+				</button>
+			</div>
+			
+		</form>
+		
+	</div>
+	
+	<!-- Show profile Modal -->
+	<div id="profileUser" class="modal">
+		<div>
+			<header>
+				<div id="wallet">
+					R$
+					<?php if(empty($_SESSION['money'])){echo"0.00";}else{echo $_SESSION['money'];}  ?>
 				</div>
-				<div style="margin-top: 20px;">
-					<button type="submit" class="ui green button" name='funds'>
-						Depositar
-					</button>
-				</div>
-			</form>
+			</header>
+			<div>
+				<img src="profileimg/<?php echo $_SESSION['hally'] ?>"  style="height: 130px;">
+				<br>
+				<?php echo "<strong style='text-transform:uppercase';>" . $_SESSION['login_user'] . "</strong>" ; ?>
+			</div>
+			<div id="user-status-profile">
+				<?php echo $_SESSION['user_bio'] ?>
+			</div>
+			<div>
+				<form class="ui form" method="POST" action="<?php $_SERVER['PHP_SELF']?>">
+					<div>
+						<div class="field">
+							<textarea rows="2" name="user_bio" placeholder="Digite uma pequena descrição"></textarea>
+						</div>
+						<button class="ui green button" type="submit" name="addBio">Adicionar</button>
+					</div>
+				</form>
+			</div>
 		</div>
-		<!-- div com class content -->
 	</div>
 
+	<!-- Creators modal -->
+	<div id="creators" class="modal">
+		<div id="mov">
+			<div class="ui link cards">
+				<div class="card">
+					<div class="image">
+						<img src="creatorsimg/cartoonme.jpg">
+					</div>
+					<div class="content">
+						<div class="header">Hallysson Alexandre</div>
+						<div class="meta">
+							<a>Desenvolvedor PHP</a>
+						</div>
+						<div class="description">
+							Neste momento devo estar desenvolvendo algo... Aguarda ae que ja te mostro
+						</div>
+					</div>
+					<div class="extra content">
+						<span class="right floated">
+							Começou em 2016
+						</span>
+						<span>
+							<i class="user icon"></i>
+						</span>
+					</div>
+				</div>	
+			</div>
+		</div>
 
-	<!-- jquery -->
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
 
-	<!-- mask plugin -->
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-mask-plugin@1.14.16/dist/jquery.mask.min.js"></script>
 
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$('.#money').mask('000.000.00', {reverse: true});
-		});
-	</script>
 
-	<script type="text/javascript">
-		if ( window.history.replaceState ) {
-			window.history.replaceState( null, null, window.location.href );
-		}
-	</script>
-	<!-- framework semantic -->
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
-	<script type="text/javascript">
 
-		$(function(){
-			$(".menu a").on('click',function(){
-				$("html, body").animate({
-					scrollTop:$($.attr(this,'href')).offset().top
-			}, 500); //500 = 1 second
+		<!-- jquery -->
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+
+		<!-- mask plugin -->
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-mask-plugin@1.14.16/dist/jquery.mask.min.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('.#money').mask('000.000.00', {reverse: true});
 			});
-		});
-	</script>
+		</script>
 
-	<!-- money money insert success -->
+		<script type="text/javascript">
+			if ( window.history.replaceState ) {
+				window.history.replaceState( null, null, window.location.href );
+			}
+		</script>
+		<!-- framework semantic -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+		<script type="text/javascript">
 
-	<script type="text/javascript">
-		$('.mini.modal').modal('show');
-	</script>
-	<script src="https://cdn.jsdelivr.net/npm/sweet-modal@1.3.2/dist/min/jquery.sweet-modal.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-	<script type="text/javascript" src="../js/script.js"></script>
-</body>
-</html>
+			$(function(){
+				$(".menu a").on('click',function(){
+					$("html, body").animate({
+						scrollTop:$($.attr(this,'href')).offset().top
+			}, 500); //500 = 1 second
+				});
+			});
+		</script>
+
+		<!-- money money insert success -->
+
+		<script type="text/javascript">
+			$('.mini.modal').modal('show');
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/sweet-modal@1.3.2/dist/min/jquery.sweet-modal.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+		<script type="text/javascript" src="../js/script.js"></script>
+	</body>
+	</html>

@@ -37,14 +37,10 @@ body{
 	text-shadow: -5px 1px 6px greenyellow;
 }
 
-
-.creators{
-	margin: 0 auto;
-	background-color: white;
-	height: 50%;
-	width: 50%;
-	padding: 20px;
+#creators #mov{
+	margin-left: 70px;
 }
+
 
 .close-animatedModal span{
 	position: relative;
@@ -124,7 +120,7 @@ section .ui.cards .card{
 	border-top-right-radius: 10px;
 	border-top-left-radius: 10px;
 	width: 150px;
-	background-color: lightgreen;
+	background-color: whitesmoke;
 }
 
 .ui.search{
