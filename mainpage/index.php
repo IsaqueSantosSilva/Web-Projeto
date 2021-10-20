@@ -1,7 +1,8 @@
 <?php
 session_start();
-
+require '../Classes/UserDelete.php';
 require '../Classes/UserMoney.php';
+require '../Classes/UserBio.php';
 
 if (isset($_POST['logoutbtn'])) {
 	header("Location: ../register/index.php");
@@ -9,6 +10,14 @@ if (isset($_POST['logoutbtn'])) {
 
 if (isset($_POST['funds'])) {
 	(new UserMoney())->verifyMoney();
+}
+
+if (isset($_POST['addBio'])) {
+	(new UserBio())->addBio();
+}
+
+if (isset($_POST['btnClose'])) {
+	(new UserDelete())->deleteCurrentUser();
 }
 ?>
 <!DOCTYPE html>
@@ -20,7 +29,9 @@ if (isset($_POST['funds'])) {
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweet-modal@1.3.2/dist/min/jquery.sweet-modal.min.css">
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+	<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
 	<link rel="stylesheet" type="text/css" href="../css/mainstore.css">
 	<link rel="icon" href="../icon/GGIcon.png" style="width: 100%; height: 100%">
 </head>
@@ -29,41 +40,45 @@ if (isset($_POST['funds'])) {
 
 	<header class="sticky">
 
-	<div>
-		<h1 class="neon" data-text="Gamin' Go">Gamin' Go</h1>
-	</div>
+		<div>
+			<h1 data-text="Gamin' Go">Gamin' Go</h1>
+		</div>
 
 		<!-- Item de procura -->
-		<div class="ui search">
+		<!-- <div class="ui search">
 			<div class="ui icon input">
 				<input class="prompt" type="text" onfocus="selectCategory()" placeholder="Procure jogos aqui">
 				<i class="search icon"></i>
 			</div>
 			<div class="results"></div>
-		</div>
+		</div> -->
 
 		<!-- Dados de login -->
+
+		<!-- classe login data -->
 		<div class="login-data">
 			<div class="ui accordion">
-				<div class="title" style="color: black;">
+				<div class="title active">
 					<img class="ui avatar image" src='profileimg/<?php echo $_SESSION['hally']?>' >
-					<strong style="text-transform: uppercase; "><?php echo $_SESSION['login_user']  ?></strong>
+					<strong style="text-transform: uppercase;">
+						<?php echo $_SESSION['login_user']; ?>
+					</strong>
 				</div>
 				<div class="content">
 					<p class="transition hidden">
-						<a style="color: blue;" href="#" onclick="showProfile()">
+						<a style="color: blue" href="#profileUser" rel="modal:open">
 							<i class="user icon"></i>
 							Perfil
 						</a>
 					</p>
 					<p class="transition hidden">
-						<a style="color: black;" id="info" href="#animatedModal">
+						<a style="color: black;" href="#creators" rel="modal:open">
 							<i class="briefcase icon"></i>
 							Criadores
 						</a>
 					</p>
 					<p class="transition hidden">
-						<a style="color:green" href="#" onclick="addFunds()">
+						<a style="color:green" href="#deposit" rel="modal:open" >
 							<i class="money icon"></i>
 							Depositar
 						</a>
@@ -76,7 +91,7 @@ if (isset($_POST['funds'])) {
 					</p>
 					<!-- It doesn't work yet -->
 					<p class="transition hidden">
-						<a style="color: darkred" href="#">
+						<a style="color: darkred" href="#modaldelete" rel="modal:open">
 							<i class="close icon"></i>
 							Apagar Conta
 						</a>
@@ -85,12 +100,59 @@ if (isset($_POST['funds'])) {
 			</div>
 		</div>
 
+		<!-- Auto Scroll to Sections -->
+
+		<div id="modaldelete" class="modal">
+			<form method="POST" action="<?php $_SERVER['PHP_SELF'] ?>">
+				<p>Você tem certeza? Esta ação não pode ser revertida</p>
+				<button href="#" class="ui red button" style="transform: translate(100%);" name="btnClose" rel="modal:close">
+					<i class="close icon"></i>Apagar conta
+				</button>
+			</form>
+		</div>
+
+		<div class="sideMenuCategory">
+			<h3>Menu</h3>
+			<div class="open-close-element" onclick="openSideMenu();">
+				<i class="angle right icon" style="font-size: 50px;"></i>
+			</div>
+			<div class="ui one column grid">
+				<div class="row">
+
+					<div class="column" style="cursor: pointer;"  onclick="scrollToSection('adventure')">
+						<span>Aventura</span>
+					</div>
+
+					<div class="column" style="cursor: pointer;" onclick="scrollToSection('horror')">
+						<span>Terror</span>
+					</div>
+
+					<div class="column" style="cursor: pointer;" onclick="scrollToSection('puzzle')">
+						<span>Puzzle</span>
+					</div>
+
+					<div class="column" style="cursor: pointer;" onclick="scrollToSection('racing')">
+						<span>Corrida</span>
+					</div>
+
+					<div class="column" style="cursor: pointer;" onclick="scrollToSection('sports')">
+						<span>Esportes</span>
+					</div>
+
+					<div class="column" style="cursor:pointer" onclick="scrollToSection('simulator')">
+						<span>Simulador</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
 	</header>
 	<!-- Divisor de conteudo -->
 	<div class="hidden-content"></div>
 
 	<div class="ui horizontal divider">
-		<p style="color:white;" class="categorys">Aventura</p>
+		<p style="color:white;" id="adventure" class="categorys">Aventura</p>
 	</div>
 
 	<section>
@@ -159,7 +221,7 @@ if (isset($_POST['funds'])) {
 	</section>
 	<!-- Divisor de conteudo -->
 	<div class="ui horizontal divider">
-		<p style="color:white;" class="categorys">Terror</p>
+		<p style="color:white;" id="horror" class="categorys">Terror</p>
 	</div>
 
 	<section>
@@ -229,7 +291,7 @@ if (isset($_POST['funds'])) {
 
 	<!-- Divisor de conteudo -->
 	<div class="ui horizontal divider">
-		<p style="color:white;" class="categorys">Quebra-Cabeça</p>
+		<p style="color:white;" id="puzzle"  class="categorys">Quebra-Cabeça</p>
 	</div>
 
 	<section>
@@ -298,7 +360,7 @@ if (isset($_POST['funds'])) {
 	</section>
 	<!-- Divisor de conteudo -->
 	<div class="ui horizontal divider">
-		<p style="color:white;" class="categorys">Corrida</p>
+		<p style="color:white;" id="racing"  class="categorys">Corrida</p>
 	</div>
 
 	<section>
@@ -369,7 +431,7 @@ if (isset($_POST['funds'])) {
 	<section>
 		<!-- Divisor de conteudo -->
 		<div class="ui horizontal divider">
-			<p style="color:white;" class="categorys">Esportes</p>
+			<p style="color:white;" id="sports"  class="categorys">Esportes</p>
 		</div>
 
 		<!-- FIFA 16 -->
@@ -439,7 +501,7 @@ if (isset($_POST['funds'])) {
 	<section>
 		<!-- Divisor de conteudo -->
 		<div class="ui horizontal divider">
-			<p style="color:white;" class="categorys">Simulador</p>
+			<p style="color:white;" id="simulator"  class="categorys">Simulador</p>
 		</div>
 
 		<!-- FIFA 16 -->
@@ -507,76 +569,8 @@ if (isset($_POST['funds'])) {
 		</div>
 	</section>
 
-	<div class="ui modal" id="profile" style="overflow-y: hidden;">
-		<i class="close icon"></i>
-		<div class="header">
-			Meu Perfil 
-			<div id="wallet">
-				<?php 
-					if (isset($_SESSION['money'])) {
-						echo "R$" . $_SESSION['money'];
-					}else{
-						echo "R$ 0,00";
-					}
-				 ?>
-			</div>
-		</div>
-		<div class="image content">
-			<div class="ui medium image">
-				<img src="profileimg/<?php echo $_SESSION['hally']?>">
-			</div>
-			<div class="description">
-				<div class="ui header">
-					<?php echo "<strong style='text-transform:uppercase'>" . $_SESSION['login_user'] . "</strong>" ?>
-				</div>
-				<p>
-					Não conhecemos <?php echo "<b>" . $_SESSION['login_user'] . "</b>" ?> muito bem. Mas temos certeza
-					de que é uma boa pessoa.
-				</p>
-			</div>
-		</div>
-		<div class="actions">
-			<div class="ui positive right labeled icon button">
-				Fechar
-				<i class="checkmark icon"></i>
-			</div>
-		</div>
-	</div>
-
-	<!-- Creators Modal -->
-	<div class="creators" style="display:none">
-		<div class="creators-content">
-			<h3 style="text-align: center;">Criadores</h3>
-			<div class="ui card">
-				<div class="content">
-					<div class="center aligned header">hls</div>
-					<div class="center aligned description">
-						<p>Estudante de programação</p>
-					</div>
-				</div>
-				<div class="extra content">
-					<div class="center aligned author">
-						<img class="ui avatar image" src="https://semantic-ui.com/images/avatar/small/jenny.jpg"> Jenny
-					</div>
-				</div>
-			</div>
-			<div class="ui divider"></div>
-			<div class="ui card">
-				<div class="content">
-					<!--------- Troque seu perfil aqui --------->
-					<div class="center aligned header">ISAQUE</div>
-					<div class="center aligned description">
-						<p>Jenny is a student studying Media Management at the New School</p>
-					</div>
-				</div>
-				<div class="extra content">
-					<div class="center aligned author">
-						<img class="ui avatar image" src="https://semantic-ui.com/images/avatar/small/jenny.jpg"> Jenny
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	
+	
 
 
 	<!-- BOTÃO DE TOPO -->
@@ -592,133 +586,124 @@ if (isset($_POST['funds'])) {
 	</div>
 
 
-
-	<div id="animatedModal">
-		<div class="close-animatedModal" >
-			<span>X</span>
-		</div>
-
-		<div class="modal-content">
-			<div id="left-content">
-				<div class="ui card">
-					<div class="content">
-						<div class="center aligned header">HLS</div>
-						<div class="center aligned description">
-							<div>
-								<img class="ui medium circular image" src="covers/facecartoon.png">
-							</div>
-							<p>
-								Pequena descrição HLS
-							</p>
-						</div>
-					</div>
-					<div class="extra content">
-						<div class="center aligned author" style="color:#0c0c0c" id="hls">
-							<a href="https://github.com/HallyssonDev" target="_blank">
-								<i class="github square icon" style="font-size: 40px;"></i>
-							</a>
-
-							<a href="https://github.com/HallyssonDev" target="_blank">
-								<i class="address book outline icon" style="font-size: 40px;"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="ui vertical divider" style="color: red;">
-				<i class="briefcase icon" style="color: red"></i>
-			</div>
-			<div id="right-content">
-				<div class="ui card">
-					<div class="content">
-						<div class="center aligned header">Isaque</div>
-						<div class="center aligned description">
-							<div>
-								<img class="ui medium circular image" src="">
-							</div>
-							<p>
-								Descrição aqui
-							</p>
-						</div>
-					</div>
-					<div class="extra content">
-						<div class="center aligned author" style="color:#0c0c0c" id="zeka">
-							<!-- Github aqui -->
-							<a href="" target="_blank">
-								<i class="github square icon" style="font-size: 40px;"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
 	<!-- Add funds modal -->
-
-	<div class="ui basic modal" id="deposit" style="overflow-x: hidden;">
-		<div class="ui icon header">
-			<form class="" action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
-				<div class="ui input focus">
-					<input type="text" id="money" name="usermoney" autocomplete="off" placeholder="1,000,000">
+	<div id="deposit" class="modal">
+		<form class="ui form" action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
+			<div class="ui input focus">
+				<input type="text" id="money" name="usermoney" placeholder="0.000.000">
+			</div>
+			<div style="margin-top: 20px;">
+				<button type="submit" class="ui green button" name="funds">
+					Depositar
+				</button>
+			</div>
+			
+		</form>
+		
+	</div>
+	
+	<!-- Show profile Modal -->
+	<div id="profileUser" class="modal">
+		<div>
+			<header>
+				<div id="wallet">
+					R$
+					<?php if(empty($_SESSION['money'])){echo"0.00";}else{echo $_SESSION['money'];}  ?>
 				</div>
-				<div style="margin-top: 20px;">
-					<button type="submit" class="ui green button" name='funds'>
-						Depositar
-					</button>
-				</div>
-			</form>
+			</header>
+			<div>
+				<img src="profileimg/<?php echo $_SESSION['hally'] ?>"  style="height: 130px;">
+				<br>
+				<?php echo "<strong style='text-transform:uppercase';>" . $_SESSION['login_user'] . "</strong>" ; ?>
+			</div>
+			<div id="user-status-profile">
+				<?php echo $_SESSION['user_bio'] ?>
+			</div>
+			<div>
+				<form class="ui form" method="POST" action="<?php $_SERVER['PHP_SELF']?>">
+					<div>
+						<div class="field">
+							<textarea rows="2" name="user_bio" placeholder="Digite uma pequena descrição"></textarea>
+						</div>
+						<button class="ui green button" type="submit" name="addBio">Adicionar</button>
+					</div>
+				</form>
+			</div>
 		</div>
-		<!-- div com class content -->
 	</div>
 
-	
+	<!-- Creators modal -->
+	<div id="creators" class="modal">
+		<div id="mov">
+			<div class="ui link cards">
+				<div class="card">
+					<div class="image">
+						<img src="creatorsimg/cartoonme.jpg">
+					</div>
+					<div class="content">
+						<div class="header">Hallysson Alexandre</div>
+						<div class="meta">
+							<a>Desenvolvedor PHP</a>
+						</div>
+						<div class="description">
+							Neste momento devo estar desenvolvendo algo... Aguarda ae que ja te mostro
+						</div>
+					</div>
+					<div class="extra content">
+						<span class="right floated">
+							Começou em 2016
+						</span>
+						<span>
+							<i class="user icon"></i>
+						</span>
+					</div>
+				</div>	
+			</div>
+		</div>
 
-	<!-- jquery -->
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/animatedmodal@1.0.0/animatedModal.min.js"></script>
 
-	<!-- mask plugin -->
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-mask-plugin@1.14.16/dist/jquery.mask.min.js"></script>
 
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$('.#money').mask('000.000.00', {reverse: true});
-		});
-	</script>
 
-	<script type="text/javascript">
-		if ( window.history.replaceState ) {
- 		 window.history.replaceState( null, null, window.location.href );
-		}
-	</script>
-	<!-- framework semantic -->
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
-	<script type="text/javascript">
 
-		$(function(){
-			$(".menu a").on('click',function(){
-				$("html, body").animate({
-					scrollTop:$($.attr(this,'href')).offset().top
-			}, 500); //500 = 1 second
+		<!-- jquery -->
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+
+		<!-- mask plugin -->
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-mask-plugin@1.14.16/dist/jquery.mask.min.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('.#money').mask('000.000.00', {reverse: true});
 			});
-		});
-	</script>
+		</script>
 
-	<!-- creators modal -->
-	<script type="text/javascript">
-		$("#info").animatedModal();
-	</script>
+		<script type="text/javascript">
+			if ( window.history.replaceState ) {
+				window.history.replaceState( null, null, window.location.href );
+			}
+		</script>
+		<!-- framework semantic -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+		<script type="text/javascript">
 
-	<!-- money money insert success -->
+			$(function(){
+				$(".menu a").on('click',function(){
+					$("html, body").animate({
+						scrollTop:$($.attr(this,'href')).offset().top
+			}, 500); //500 = 1 second
+				});
+			});
+		</script>
 
-	<script type="text/javascript">
-		$('.mini.modal').modal('show');
-	</script>
+		<!-- money money insert success -->
 
-	<script src="https://cdn.jsdelivr.net/npm/sweet-modal@1.3.2/dist/min/jquery.sweet-modal.min.js"></script>
-
-	<script type="text/javascript" src="../js/script.js"></script>
-</body>
-</html>
+		<script type="text/javascript">
+			$('.mini.modal').modal('show');
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/sweet-modal@1.3.2/dist/min/jquery.sweet-modal.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+		<script type="text/javascript" src="../js/script.js"></script>
+	</body>
+	</html>

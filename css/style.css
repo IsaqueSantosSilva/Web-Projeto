@@ -1,7 +1,4 @@
-@font-face{
-	font-family: Gameon; 
-	src: url('../font/gameon.ttf');
-}
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap');
 
 body{
 	background-color: #000000;
@@ -11,29 +8,41 @@ body{
 }
 
 header{
-	background-image: linear-gradient(to right, #790202 , #000000); 
-	height: 200px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: #0c0c0c;
+	height: 110px;
+	z-index: 999;
+	border-style: solid;
+	border-top-style: hidden;
+	border-bottom-style: solid 1px;
+	border-bottom-color: greenyellow;
 }
 
 header h1{
-	text-align: center;
-	padding: 50px;
-	color: white;
-	font-size: 35px;
+	font-family: 'Urbanist', sans-serif;
+	font-size: 70px;
+	text-align: left;
+	padding: 10px;
+	color: greenyellow;
+	text-shadow: -5px 1px 6px greenyellow;
 }
 
 form{
 	background-color: rgb(255, 255, 255);
 	color: rgb(0, 0, 0);
-	position: relative;
-	align-content: center;
-	width: 30%;
-	left: calc(100% - 65%);
+	width: 600px;
+	display: block;
+	float: right;
 	border-style: solid;
 	border-width: 1px;
 	padding: 50px;
 	border-radius: 10px;
-	margin-top: 20px;
+	margin-top: 200px;
+	border: 5px;
+	border-style: solid;
+	border-color: greenyellow;
 }
 
 form h3{
@@ -45,77 +54,10 @@ form h3{
 
 .position-button{
 	position: relative;
-	left: calc(100% - 65%);
-	margin: 28px auto;
-	margin-left: -12px;
+	transform: translate(40%);
+	
 
 }
 
-.neon{
-	font-family: 'neon';
-	transform: translate(-50%, -50%);
-	font-size: 8vh;
-	color: #fff;
-	text-shadow:0 0 20px #00FF7F;
-	animation: desappear 1s infinite;
-	animation: floating 5s infinite;
-	position: relative;
-	left: 19vh;
-}
 
-.neon:after{
-	content: attr(data-text);
-	z-index: -1;
-	color: #00FF7F; 
-	animation: lbrink 4s infinite;
-	position: relative;
-	right: 38vh;
-}
-
-@keyframes desappear{
-	0%{
-		opacity: 1;
-	}
-	50%{
-		opacity: 0.9;
-	}
-	100%{
-		opacity: 1;
-	}
-
-}
-
-@keyframes lbrink{
-	0%{
-		opacity: 1;
-	}
-
-	40%{
-		opacity: 0;
-	}
-
-	70%{
-		opacity: 1;
-	}
-
-	80%{
-		opacity: 0.4;
-	}
-
-	100%{
-		opacity: 1;
-	}
-}
-
-@keyframes floating{
-	0%{
-		transform: translateY(0px);
-	}
-	50%{
-		transform: translateY(-20px);
-	}
-	100%{
-		transform: translateY(0px);
-	}
-}
 

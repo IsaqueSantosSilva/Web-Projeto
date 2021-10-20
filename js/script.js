@@ -146,14 +146,6 @@ function callSkylines(){
 $('.ui.accordion').accordion();
 
 
-function showProfile() {
-	$('#profile').modal('show');
-}
-
-function addFunds() {
-	$('#deposit').modal('show');
-}
-
 // Mostrar modal que apresenta os criadores
 
 function selectCategory(){
@@ -183,3 +175,9 @@ var content = [
 { title: 'Cities: Skylines' },
   // etc
   ];
+
+  //Auto Scroll Section
+  function scrollToSection(id) {
+	var section = document.getElementById(id)
+	section.scrollIntoView();
+}
